@@ -54,14 +54,22 @@ header{
     color:#03c98d;
     margin-left:30px;
 }
-.xd-navbar-left
+.xd-navbar-left, .xd-navbar-right
 {
     padding:0px 20px;
     font-family: 'GraphikWeb-regular';
-    color:#24292e !important;
+    color:#24292e ;
     font-size:16px;
 }
+.xd-navbar-right
+{
+    list-style-type: none;
+    float:right;
+    display:flex;
+
+}
 .xd-navbar-left{
+    float:left;
     list-style-type: none;
     display: flex;
 }
@@ -70,9 +78,15 @@ header{
     padding:10px 20px; 
     font-family: 'GraphikWeb-regular';
 }
-.xd-navbar-left li a
+.xd-navbar-right li
 {
-    color:#24292e !important;
+    padding:10px; 
+    font-family: 'GraphikWeb-regular';
+}
+
+.xd-navbar-left li a, .xd-navbar-right li a
+{
+    color:#24292e;
     cursor: pointer;
     font-size: 15px;
     font-weight: 400;
@@ -154,3 +168,35 @@ header{
     border: 1px solid #f4f6f8;
     background-color:#F5F8FF;
 }
+
+
+/****navbuttons****/
+.xd-login
+{
+    padding: 8px 20px;
+    color:#24292e !important;
+    font-size:13px !important;
+    text-transform: uppercase;
+    font-family: 'GraphikWeb-Medium';
+    letter-spacing: 0.5px;
+    transition: all 0.2s;
+    border:2px solid #03c98d;
+}
+.xd-login:hover{
+    background: #03c98d;
+    color:#ffffff !important;
+}
+.xd-signup
+{
+    padding: 8px 20px;
+    color:#ffffff !important;
+    background: #03c98d;
+    font-size:13px !important;
+    letter-spacing: 0.3px;
+    font-family: 'GraphikWeb-Medium';
+    text-transform: uppercase;
+    border:2px solid #03c98d;
+}
+
+
+/****navbar css ends********/
