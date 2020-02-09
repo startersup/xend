@@ -1,0 +1,154 @@
+/******
+project: xendworks
+owned by: xendworks private Ltd.
+*****/
+
+
+
+
+@import "fonts.css";
+@import "media.css";
+
+/****main-navigation-bar***/
+header{
+    margin: 0;
+    padding: 15px 0;
+    transition: all 0.6s;
+    z-index: 1000;
+}
+.xd-navbar
+{
+    background-color: #ffffff;
+}
+.xd-container
+{
+    width: 100%;
+    max-width: 1350px;
+    margin:0 auto;
+}
+
+.xd-logo-bar
+{
+    font-family: 'GraphikWeb-Medium';
+    color:#243746 !important;
+    font-size:28px;
+    text-decoration: none !important;
+}
+.xd-logo-bar:before
+{
+    content: "";
+    display: inline-block;
+    width: 25px;
+    height: 25px;
+    position: absolute;
+    margin-top: 7px;
+    margin-left:3px;
+    margin-right:0px;
+    -webkit-transition: .3s ease;
+    transition: .3s ease;
+    background: url(/assets/images/xd-logo.svg) 100%/contain no-repeat;
+
+}
+.xd-logo-bar span
+{
+    color:#03c98d;
+    margin-left:30px;
+}
+.xd-navbar-left
+{
+    padding:0px 20px;
+    font-family: 'GraphikWeb-regular';
+    color:#24292e !important;
+    font-size:16px;
+}
+.xd-navbar-left{
+    list-style-type: none;
+    display: flex;
+}
+.xd-navbar-left li
+{
+    padding:10px 20px; 
+    font-family: 'GraphikWeb-regular';
+}
+.xd-navbar-left li a
+{
+    color:#24292e !important;
+    cursor: pointer;
+    font-size: 15px;
+    font-weight: 400;
+    text-decoration: none;
+    text-decoration: none !important;
+}
+.custom-arrow:after {
+    content: '';
+    border: 1.5px solid #24292e;
+    border-width: 0 2px 2px 0;
+    display: inline-block;
+    padding: 3px;
+    vertical-align: middle;
+    transform: rotate(45deg);
+    position: relative;
+    left: 8px;
+    top: -2px;
+}
+.dropdown:hover .dropdown-toggle.custom-arrow:after
+{
+    transform: rotate(225deg);
+    top:0px;
+    border-color:#24292e;
+   transition:0.2s;
+}
+.xd-navbar-left li a:hover
+{
+    color:#000000 !important;
+    font-weight:600;
+}
+
+.xd-dropdown-content
+{
+    position: fixed;
+    display: none;
+    opacity: 0;
+    transition: all .8s ease;
+    margin-top: 15px;
+    border: 1px solid #f4f6f8;
+    box-shadow: 0 5px 30px 0 rgba(147,161,176,.25);
+    padding: 20px;
+    background: #fff;
+    max-width: 600px;
+}
+.xd-navbar-left>li:hover .xd-dropdown-content {
+    display: block;
+    opacity: 1;
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+}
+.xd-linker img {
+    height: 45px;
+    width: 45px;
+    margin-top: -20px;
+}
+.xd-head-text {
+    font-size: 16px;
+    font-family: 'GraphikWeb-Medium';
+    line-height: 20px;
+    cursor: pointer;
+}
+.xd-tagline
+{
+    font-size: 12px;
+    margin-top:5px;
+    color:rgb(74, 74, 75);
+    font-family: 'GraphikWeb-regular';
+    cursor: pointer;
+
+}
+.xd-nav-card
+{
+    background-color:#ffffff;
+    padding:15px; 
+}
+.xd-nav-card:hover
+{
+    box-shadow: 0 5px 30px 0 rgba(147,161,176,.25);
+}
