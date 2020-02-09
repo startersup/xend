@@ -113,7 +113,7 @@ header{
     margin-top: 15px;
     border: 1px solid #f4f6f8;
     box-shadow: 0 5px 30px 0 rgba(147,161,176,.25);
-    padding: 20px;
+    padding: 30px;
     background: #fff;
     max-width: 600px;
 }
@@ -147,8 +147,10 @@ header{
 {
     background-color:#ffffff;
     padding:15px; 
+    border: 1px solid transparent;
 }
 .xd-nav-card:hover
 {
-    box-shadow: 0 5px 30px 0 rgba(147,161,176,.25);
+    border: 1px solid #f4f6f8;
+    background-color:#F5F8FF;
 }
