@@ -1,0 +1,9 @@
+.xd-flex
+{
+    display: flex;
+    flex-wrap: wrap;
+}
+.xd-flex-col-50
+{
+    width:50%;
+}

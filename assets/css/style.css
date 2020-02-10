@@ -8,7 +8,7 @@ owned by: xendworks private Ltd.
 
 @import "fonts.css";
 @import "media.css";
-
+@import "predefined.css";
 /****main-navigation-bar***/
 header{
     margin: 0;
@@ -32,6 +32,7 @@ header{
     font-family: 'GraphikWeb-Medium';
     color:#243746 !important;
     font-size:28px;
+    letter-spacing: 0.5px;
     text-decoration: none !important;
 }
 .xd-logo-bar:before
@@ -89,6 +90,7 @@ header{
     color:#24292e;
     cursor: pointer;
     font-size: 15px;
+    letter-spacing: 0.2px;
     font-weight: 400;
     text-decoration: none;
     text-decoration: none !important;
@@ -129,7 +131,7 @@ header{
     box-shadow: 0 5px 30px 0 rgba(147,161,176,.25);
     padding: 30px;
     background: #fff;
-    max-width: 600px;
+    max-width: 650px;
 }
 .xd-navbar-left>li:hover .xd-dropdown-content {
     display: block;
@@ -200,3 +202,18 @@ header{
 
 
 /****navbar css ends********/
+
+
+
+/****home-main-banner***/
+
+.xd-main-banner
+{
+padding:100px 0px;
+}
+.xd-main-banner h1{
+font-size:50px;
+color:#24292e;
+line-height: 65px;
+font-family: 'GraphikWeb-Bold';
+}
