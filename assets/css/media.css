@@ -4,8 +4,40 @@
 {
  display:none;
 }
+
 .xd-navbar
 {
-    padding: 10px 20px;
+    padding:20px;
+}
+.xd-flex {
+    display: block !important;
+
+}
+.xd-main-banner {
+    padding:20px !important;
+}
+.xd-flex-col-50
+{
+    width:100% !important;
+}
+.xd-main-banner h1 {
+    font-size: 32px !important;
+    line-height: 54px !important;
+}
+.xd-main-banner p {
+    font-size: 16px !important;
+    line-height: 27px !important;
+
+}
+.xd-signup form button {
+    font-size: 13px !important;
+    min-width: 160px !important;
+}
+.xd-signup form .input-container input
+{
+    font-size: 14px !important;
+}
+.xd-home-banner-images {
+    margin-top: 50px;
 }
 }
