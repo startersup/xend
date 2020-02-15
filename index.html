@@ -28,6 +28,11 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <script src="https://code.jquery.com/jquery-2.2.0.min.js" type="text/javascript"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet">
+    <script src="/assets/js/carousel.js"></script>
     <link rel="stylesheet" href="./assets/css/style.css">
     <link rel="canonical" href="https://xendworks.com/" />
 </head>
@@ -109,7 +114,17 @@
         <button type="submit" >Signup for Free</button>
     </form>
     </div>
-        </div></div>
+        </div>
+        <section class="customer-logos slider">
+            <div class="slide"><img src="https://minicabee.co.uk/assets/images/logo.png"></div>
+            <div class="slide"><img src="http://atlascars-uk.com/admin/logo.png"></div>
+            <div class="slide"><img src="http://icrepair.in/assets/images/logo.png"></div>
+            <div class="slide"><img src="http://atlascars-uk.com/admin/logo.png"></div>
+            <div class="slide"><img src="http://icrepair.in/assets/images/logo.png"></div>
+            <div class="slide"><img src="https://minicabee.co.uk/assets/images/logo.png"></div>
+            <div class="slide"><img src="http://atlascars-uk.com/admin/logo.png"></div>
+         </section>
+    </div>
     <div class="xd-flex-col-50">
        <img class="xd-home-banner-images" src="/assets/images/home-banner.svg">
     </div>
@@ -117,4 +132,30 @@
     </div>
 </section>
 
+
+
+<script>
+$(document).ready(function(){
+    $('.customer-logos').slick({
+        slidesToShow: 6,
+        slidesToScroll: 1,
+        autoplay: true,
+        autoplaySpeed: 1500,
+        arrows: false,
+        dots: false,
+        pauseOnHover: false,
+        responsive: [{
+            breakpoint: 768,
+            settings: {
+                slidesToShow: 4
+            }
+        }, {
+            breakpoint: 520,
+            settings: {
+                slidesToShow: 3
+            }
+        }]
+    });
+});
+</script>
 </body>
