@@ -1,0 +1,29 @@
+
+@font-face {
+  font-family: 'GraphikWeb-regular';
+    src:  url('../fonts/GraphikWeb-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;  
+}
+
+@font-face {
+    font-family: 'GraphikWeb-Medium';
+   src:  url('../fonts/GraphikWeb-Medium.woff') format('woff');
+    font-weight: 500;
+    font-style: normal;  
+
+}
+
+@font-face {
+      font-family: 'GraphikWeb-Semibold';
+      src:  url('../fonts/GraphikWeb-Semibold.woff') format('woff');
+    font-weight: 600;
+    font-style: normal;  
+}
+@font-face {
+     font-family: 'GraphikWeb-Bold';
+     src:  url('../fonts/GraphikWeb-Bold.woff') format('woff');
+    font-weight: 700;
+    font-style: normal;  
+}
+

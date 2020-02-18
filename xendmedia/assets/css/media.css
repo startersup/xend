@@ -1,0 +1,53 @@
+@media screen and (max-width: 600px) {
+
+.xd-mobile-hide
+{
+ display:none;
+}
+
+.xd-navbar
+{
+    padding:20px;
+}
+.xd-flex {
+    display: block !important;
+
+}
+.xd-main-banner {
+    padding:0px 20px !important;
+}
+.xd-flex-col-50
+{
+    width:100% !important;
+}
+.xd-main-banner h1 {
+    font-size: 26px !important;
+    line-height: 38px !important;
+}
+.xd-main-banner p {
+    font-size: 16px !important;
+    line-height: 27px !important;
+
+}
+.xd-signup form button {
+    font-size: 13px !important;
+    min-width: 160px !important;
+}
+.xd-signup form .input-container input
+{
+    font-size: 14px !important;
+    max-width:160px !important;
+}
+.xd-home-banner-images {
+    margin-top: 50px;
+}
+.slick-track
+{
+    height:100px;
+}
+.customer-logos {
+    position: relative;
+    max-width: 700px;
+    height: 100px;
+}
+}
