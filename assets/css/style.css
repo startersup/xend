@@ -20,7 +20,7 @@ header{
     background-color: #ffffff;
     position: sticky;
     height: 65px;
-    border-bottom:1px solid #f1f1f1;
+    box-shadow: 0 4px 20px 0 rgba(49,67,81,.07);
     top:0px;
 }
 .xd-container
