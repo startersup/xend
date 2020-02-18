@@ -21,8 +21,8 @@
     width:100% !important;
 }
 .xd-main-banner h1 {
-    font-size: 32px !important;
-    line-height: 54px !important;
+    font-size: 26px !important;
+    line-height: 38px !important;
 }
 .xd-main-banner p {
     font-size: 16px !important;
@@ -36,8 +36,18 @@
 .xd-signup form .input-container input
 {
     font-size: 14px !important;
+    max-width:160px !important;
 }
 .xd-home-banner-images {
     margin-top: 50px;
+}
+.slick-track
+{
+    height:100px;
+}
+.customer-logos {
+    position: relative;
+    max-width: 700px;
+    height: 100px;
 }
 }

@@ -335,7 +335,7 @@ container input, .ss_email_signup form button {
     color: rgba(36, 41, 46, 0.8);
     font-weight: 400;
     font-family: 'GraphikWeb-Regular';
-    min-width: 270px;
+    max-width: 270px;
     padding: 0 12px;
 }
 /* Slider */
