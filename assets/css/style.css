@@ -24,6 +24,7 @@ header{
     background-color: #ffffff;
     position: sticky;
     height: 65px;
+    border-bottom:none !important;
     box-shadow: 0 4px 20px 0 rgba(49,67,81,.07);
     top:0px;
 }
@@ -137,9 +138,9 @@ header{
     border-color:#24292e;
    transition:0.2s;
 }
-.xd-navbar-left li a:hover
+.xd-navbar-left li a:hover,  .xd-navbar-right li a:hover
 {
-    color:#000000 !important;
+    color:#03C98D ;
     font-weight:600;
 }
 
@@ -155,9 +156,9 @@ header{
     box-shadow: 0 5px 30px 0 rgba(147,161,176,.25);
     padding:30px;
     background: #fff;
-    max-width: 900px;
+    max-width: 600px;
 }
-.xd-navbar-left>li:hover .xd-dropdown-content {
+.xd-navbar-right>li:hover .xd-dropdown-content {
     display: block;
     visibility: visible;
     opacity: 1;}
@@ -240,6 +241,11 @@ cursor: pointer;
     border:2px solid #03c98d;
 }
 
+.xd-nav-signup:hover
+{
+    background: #04b983;
+    border: 2px solid #04b983;
+}
 
 /****navbar css ends********/
 
@@ -250,17 +256,19 @@ cursor: pointer;
 .xd-main-banner
 {
 padding:100px 0px;
+background: linear-gradient(to bottom, #EAF9F2 0%,#EDFAF3 50%,#ffffff 100%);
 }
 .xd-main-banner h1{
-font-size:50px;
+font-size:42px;
 color:#1d2b36;
-max-width:600px;
+max-width:550px;
 width:100%;
-line-height: 70px;
+line-height: 60px;
 font-family: 'GraphikWeb-Semibold';
 }
 .xd-main-banner p
 {
+    margin-top:30px;
     font-size:18px;
     color: rgba(106, 106, 106, 0.74);
     max-width:500px;
@@ -270,6 +278,7 @@ font-family: 'GraphikWeb-Semibold';
 }
 .xd-home-banner-images
 {
+    margin-top: -50px;
     max-width:800px;
     width:100%;
 }
@@ -502,6 +511,61 @@ width:100%;
     background: linear-gradient(270deg, #fff 0, rgba(255, 255, 255, 0) 100%);
 }
 
+
+/******section 2*****/
+
+.xd-features
+{
+    padding:50px 0px;
+}
+
+.xd-features h1 {
+    font-family: 'GraphikWeb-Bold';
+    color: #000000;
+    font-size: 40px;
+    text-align: center;
+    font-weight: 400;
+    line-height: 32px;
+}
+
+
+.xd-features h3 {
+    font-family: 'GraphikWeb-Regular';
+    color: #000000;
+    font-size: 20px;
+    text-align: center;
+    font-weight: 400;
+    line-height: 30px;
+}
+.xd-features p {
+    font-family: 'GraphikWeb-Regular';
+    color: #828282;
+    font-size: 15px;
+    text-align: center;
+    margin: 0 auto;
+    font-weight: 400;
+    letter-spacing: 0.2px;
+    line-height: 20px;
+}
+.xd-features h4 {
+    font-family: 'GraphikWeb-SemiBold';
+    color: #000000;
+    font-size: 20px;
+    padding: 5px;
+    text-align: center;
+    margin: 0 auto;
+    font-weight: 600;
+    line-height: 32px;
+}
+.carding
+{
+    padding:20px;
+}
+
+.carding.right {
+    border-right: 2px solid;
+    border-image: radial-gradient(rgba(0,0,0,0.08),transparent) .5;
+}
 
 
 
@@ -1120,8 +1184,8 @@ cursor: pointer;
     text-align: center;
 }
 .xd-icons {
-    width: 30px;
-    height: 30px;
+    width: 28px;
+    height: 28px;
 }
 .tooltip > .tooltip-inner {
     width: 130px !important;

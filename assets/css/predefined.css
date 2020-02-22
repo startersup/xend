@@ -7,7 +7,27 @@
 {
     width:50%;
 }
+.xd-flex-col-50
+{
+    width:50%;
+}
+.xd-flex-col-40
+{
+    width:40%;
+}
+.xd-flex-col-60
+{
+    width:60%;
+}
 .pd-100
 {
  padding-top:100px;
+}
+.xd-top-30
+{
+margin-top:30px;
+}
+.xd-top-50
+{
+    margin-top:50px;
 }
