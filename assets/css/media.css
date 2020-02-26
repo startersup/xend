@@ -13,8 +13,8 @@
     display: block !important;
 
 }
-.xd-main-banner {
-    padding:0px 20px !important;
+.xd-main-banner, .xd-features {
+    padding: 40px 30px !important;
 }
 .xd-flex-col-50
 {
@@ -50,4 +50,23 @@
     max-width: 700px;
     height: 100px;
 }
+
+.xd-flex-col-40
+{
+    width:100% !important; 
+}
+.xd-flex-col-60
+{
+    width:100% !important;
+}
+
+
+
+.xd-features h3 {
+    font-size: 30px !important;
+    line-height: 35px !important;
+}
+
+
+
 }

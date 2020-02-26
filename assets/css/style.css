@@ -519,20 +519,11 @@ width:100%;
     padding:50px 0px;
 }
 
-.xd-features h1 {
-    font-family: 'GraphikWeb-Bold';
-    color: #000000;
-    font-size: 40px;
-    text-align: center;
-    font-weight: 400;
-    line-height: 32px;
-}
-
 
 .xd-features h3 {
-    font-family: 'GraphikWeb-Regular';
+    font-family: 'GraphikWeb-SemiBold';
     color: #000000;
-    font-size: 20px;
+    font-size: 35px;
     text-align: center;
     font-weight: 400;
     line-height: 30px;
@@ -540,7 +531,7 @@ width:100%;
 .xd-features p {
     font-family: 'GraphikWeb-Regular';
     color: #828282;
-    font-size: 15px;
+    font-size: 18px;
     text-align: center;
     margin: 0 auto;
     font-weight: 400;
@@ -557,16 +548,6 @@ width:100%;
     font-weight: 600;
     line-height: 32px;
 }
-.carding
-{
-    padding:20px;
-}
-
-.carding.right {
-    border-right: 2px solid;
-    border-image: radial-gradient(rgba(0,0,0,0.08),transparent) .5;
-}
-
 
 
 /*****xend-media-css*******/
@@ -1183,16 +1164,44 @@ cursor: pointer;
     cursor: pointer;
     text-align: center;
 }
+.xd-dash-sidebar ul li:hover  .tooltiptext
+{
+display: block;
+}
+
 .xd-icons {
     width: 28px;
     height: 28px;
 }
-.tooltip > .tooltip-inner {
-    width: 130px !important;
-    text-align:center;
-    padding:10px!important;
-    font-size:13px !important;
-    font-family: 'GraphikWeb-Medium'; 
-  }
-  
+.tooltip-col {
+    position: relative;
+}
+
+.tooltiptext {
+    display: none;
+    width: 150px;
+    height:auto;
+    background-color: rgb(65, 63, 63);
+    color: #fff;
+    top:0;
+    text-align: center;
+    padding:5px 10px;
+    position: absolute;
+    z-index: 1;
+    font-size:13px;
+    left:60px;
+}
+
+.tooltiptext::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    right: 100%;
+    margin-top: -10px;
+    border-width: 10px;
+    border-style: solid;
+    border-color: transparent rgb(65, 63, 63) transparent transparent;
+}
+
+
 /********************************/
