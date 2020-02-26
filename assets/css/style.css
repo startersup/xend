@@ -240,9 +240,9 @@ cursor: pointer;
 }
 .xd-nav-card:hover
 {
-    background-color: rgba(3, 201, 142, 0.18);
-    border:1px solid #03c98d;
-    border-radius: 5px;
+
+    box-shadow: 0 1px 1px 0 rgba(90,122,190,.1), 0 10px 20px 0 rgba(90,122,190,.2);
+    border: 1px solid rgba(90,122,190,.08);
 }
 
 
@@ -554,32 +554,107 @@ width:100%;
 
 
 .xd-products h3 {
-    font-family: 'GraphikWeb-Bold';
-    color: #03363d;
-    font-size: 35px;
+    font-family: 'GraphikWeb-SemiBold';
+    color: #00000a;
+    font-size: 32px;
     text-align: center;
     font-weight: 400;
     line-height: 30px;
 }
-.xd-products p {
+.xd-products h4 {
     font-family: 'GraphikWeb-Regular';
-    color: #828282;
+    color: #242438;
     font-size: 18px;
+    padding: 5px;
     text-align: center;
     margin: 0 auto;
-    font-weight: 400;
-    letter-spacing: 0.2px;
-    line-height: 20px;
+    font-weight: 500;
+    line-height: 32px;
 }
-.xd-products h4 {
+
+
+
+
+
+/****cards ****/
+.xd-products-desc
+{
+    padding-top:60px;
+}
+
+.xd-product-cards
+{
+    position: relative;
+    margin: 20px;
+    padding: 25px;
+    height:250px;
+    cursor: pointer;
+    box-shadow: 0 1px 1px 0 rgba(90,122,190,.1), 0 10px 20px 0 rgba(90,122,190,.2);
+    border: 1px solid rgba(90,122,190,.08);
+}
+.xd-product-cards:after {
+    content: '';
+    display: block;
+    width: 0%;
+    height: 5px;
+  bottom:-2px;
+   left:0px;
+    position: absolute;
+    background: transparent;
+    transition: width 1s;
+  }
+  .xd-product-cards:hover::after
+  {
+    width:200px;
+    width: 100%;
+    position: absolute;
+    background: #03c98d;
+  }
+.xd-product-logos
+{
+    max-width:70px;
+    margin-bottom:10px;
+    width:100%;
+}
+
+/* .xd-back-support {
+   border-left:2px solid #ff7272;
+}
+
+.xd-back-fleet
+{
+    border-left:2px solid #8572ff;
+}
+.xd-back-mail
+{
+    border-left:2px solid #72bfff;
+}
+.xd-back-media {
+    border-left:2px solid #03c98d;
+ } */
+ 
+
+.xd-product-cards h3
+{
     font-family: 'GraphikWeb-Medium';
-    color: #808080;
+    color: #03363d;
     font-size: 20px;
     padding: 5px;
     text-align: center;
     margin: 0 auto;
     font-weight: 600;
-    line-height: 32px;
+    line-height: 32px;  
+}
+.xd-product-cards p {
+    font-family: 'GraphikWeb-Regular';
+    color: #242438;
+    font-size: 15px;
+    padding-top:10px;
+    text-align: center;
+    margin: 0 auto;
+    font-weight: 400;
+    letter-spacing: 0.2px;
+    line-height: 24px;
 }
 
 
@@ -863,9 +938,19 @@ cursor: pointer;
     letter-spacing: 0.3px;
     font-family: 'GraphikWeb-Medium';
     text-transform: uppercase;
+    cursor: pointer;
     border:2px solid #03c98d;  
 }
+.xd-get-started:hover
+{
+    background-color: #05b681;
+    border:2px solid #05b681; 
+    transition: 0.3s;
+}
 /****navbar css ends********/
+
+
+
 
 
 
