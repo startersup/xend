@@ -233,14 +233,16 @@ cursor: pointer;
 .xd-nav-card
 {
     background-color:#ffffff;
-    padding:10px; 
+    padding:15px; 
     min-height:100px;
+    margin-top:20px;
     border: 1px solid transparent;
 }
 .xd-nav-card:hover
 {
-    border: 1px solid #f4f6f8;
-    background-color:#F5F8FF;
+    background-color: rgba(3, 201, 142, 0.18);
+    border:1px solid #03c98d;
+    border-radius: 5px;
 }
 
 
@@ -553,7 +555,7 @@ width:100%;
 
 .xd-products h3 {
     font-family: 'GraphikWeb-Bold';
-    color: #03363D;
+    color: #03363d;
     font-size: 35px;
     text-align: center;
     font-weight: 400;
@@ -787,7 +789,6 @@ font-family: 'GraphikWeb-Bold';
 line-height: 24px;
 margin-bottom:10px;
 border-bottom:0.5px dashed #03c98d;
-
 cursor: pointer;
 }
 .xd-linker img {
@@ -815,18 +816,7 @@ cursor: pointer;
     cursor: pointer;
 
 }
-.xd-nav-card
-{
-    background-color:#ffffff;
-    padding:10px; 
-    min-height:100px;
-    border: 1px solid transparent;
-}
-.xd-nav-card:hover
-{
-    border: 1px solid #f4f6f8;
-    background-color:#F5F8FF;
-}
+
 
 
 /****navbuttons****/
