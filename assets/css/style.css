@@ -9,6 +9,7 @@ owned by: xendworks private Ltd.
 @import "fonts.css";
 @import "media.css";
 @import "predefined.css";
+@import "animation.css";
 /****main-navigation-bar***/
 body
 {
@@ -588,11 +589,12 @@ width:100%;
     margin: 20px;
     padding: 25px;
     height:250px;
+    transition: transform 175ms ease-in,opacity 175ms ease-in,-webkit-transform 175ms ease-in;
     cursor: pointer;
     box-shadow: 0 1px 1px 0 rgba(90,122,190,.1), 0 10px 20px 0 rgba(90,122,190,.2);
     border: 1px solid rgba(90,122,190,.08);
 }
-.xd-product-cards:after {
+/* .xd-product-cards:after {
     content: '';
     display: block;
     width: 0%;
@@ -609,6 +611,11 @@ width:100%;
     width: 100%;
     position: absolute;
     background: #03c98d;
+  } */
+
+  .xd-product-cards:hover
+  {
+    transform: scale(1.05,1.05);
   }
 .xd-product-logos
 {
@@ -617,21 +624,21 @@ width:100%;
     width:100%;
 }
 
-/* .xd-back-support {
-   border-left:2px solid #ff7272;
+.xd-back-support {
+   border-bottom:5px solid #ff7272;
 }
 
 .xd-back-fleet
 {
-    border-left:2px solid #8572ff;
+    border-bottom:5px solid #8572ff;
 }
 .xd-back-mail
 {
-    border-left:2px solid #72bfff;
+    border-bottom:5px solid #72bfff;
 }
 .xd-back-media {
-    border-left:2px solid #03c98d;
- } */
+    border-bottom:5px solid #03c98d;
+ }
  
 
 .xd-product-cards h3
@@ -655,6 +662,17 @@ width:100%;
     font-weight: 400;
     letter-spacing: 0.2px;
     line-height: 24px;
+}
+
+
+
+.xd-features
+{
+    margin-top:50px;
+    position: relative;
+    text-align: center;
+    padding: 100px 0px;
+    background-color: #f7f9fa;
 }
 
 
