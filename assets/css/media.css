@@ -39,7 +39,7 @@
     max-width:160px !important;
 }
 .xd-home-banner-images {
-    margin-top: 50px;
+    margin-top: 50px !important;
 }
 .slick-track
 {
@@ -71,5 +71,12 @@
 {
     margin-top:0px;
 }
-
+.xd-products h3
+{
+    font-size:22px !important;
+}
+.xd-products h4 {
+    font-size: 15px;
+    line-height: 25px;
+}
 }
