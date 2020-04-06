@@ -1,5 +1,34 @@
 @media screen and (max-width: 600px) {
-
+.xd-hamburger
+{
+    padding: 10px;
+    cursor: pointer;
+    pointer-events: all;
+    float: right;
+    line-height: 1.25;
+}
+.xd-hamburger-i
+{
+    width: 20px;
+    height: 2px;
+    margin-top: 4px;
+    border-radius: 1px;
+    position: relative;
+    display: block;
+    vertical-align: middle;
+}
+.xd-hamburger-i::after, .xd-hamburger-i::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border-radius: inherit;
+    /* background-color: inherit; */
+    background-color: #000000;
+    transition: transform 250ms ease;
+    -ms-transform-origin: 50% 1px;
+    transform-origin: 50% 1px;
+}
 .xd-mobile-hide
 {
  display:none;
@@ -25,9 +54,9 @@
     line-height: 38px !important;
 }
 .xd-main-banner p {
-    font-size: 16px !important;
-    line-height: 27px !important;
-
+    margin-top: 20px !important;
+    font-size: 14px !important;
+    line-height: 24px !important;
 }
 .xd-signup form button {
     font-size: 13px !important;
