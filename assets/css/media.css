@@ -7,6 +7,11 @@
     float: right;
     line-height: 1.25;
 }
+.pos-ab 
+{
+    width: 50px !important;
+    height: 40px !important;
+}
 .xd-hamburger-i
 {
     width: 20px;
@@ -24,11 +29,21 @@
     height: 100%;
     border-radius: inherit;
     /* background-color: inherit; */
-    background-color: #000000;
+    background-color: #ffffff;
     transition: transform 250ms ease;
     -ms-transform-origin: 50% 1px;
     transform-origin: 50% 1px;
 }
+.xd-navbar-fixed .xd-hamburger-i::after, .xd-hamburger-i::before
+{
+    background-color: #000000;  
+}
+
+.xd-main-banner .overlay, .xd-main-banner
+{
+    height:400px !important;
+}
+
 .xd-mobile-hide
 {
  display:none;
@@ -36,7 +51,8 @@
 
 .xd-navbar
 {
-    padding:20px;
+    padding:10px;
+    height:60px !important;
 }
 .xd-flex {
     display: block !important;
@@ -52,6 +68,7 @@
 .xd-main-banner h1 {
     font-size: 26px !important;
     line-height: 38px !important;
+    width:100% !important;
 }
 .xd-main-banner p {
     margin-top: 20px !important;
