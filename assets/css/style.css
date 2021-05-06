@@ -737,6 +737,15 @@ font-family: 'GraphikWeb-Semibold';
       letter-spacing: 0.7px;
       font-family: 'GraphikWeb-SemiBold';
   }
+  .xd-footer p 
+  {
+    color:#dbd9d2;
+    font-size:14px;
+    letter-spacing: 0.3px;
+    max-width:250px;
+    padding:10px;
+    font-family: 'GraphikWeb-Regular';  
+  }
   .xd-footer ul 
   {
       list-style-type: none;
@@ -772,7 +781,13 @@ font-family: 'GraphikWeb-Semibold';
       border-top:1px solid #5e6086b8;
       margin-top:30px;
     padding:20px;
+
+  }
+  .xd-bottom-footer p 
+  {
+      width:100%;
+      max-width:500px;
     color:#ffffff;
-    text-align: center;
+    text-align: center !important;
     font-family: 'GraphikWeb-Regular';
   }
