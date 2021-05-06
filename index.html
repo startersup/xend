@@ -24,21 +24,18 @@
     <meta name="twitter:url" content="https://xendworks.com/" />
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- social share -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
     <script src="https://code.jquery.com/jquery-2.2.0.min.js" type="text/javascript"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
     <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet">
-    <script src="./assets/js/carousel.js"></script>
+    <script src="./assets/js/scroll.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="./assets/css/style.css">
     <link rel="canonical" href="https://xendworks.com/" />
 </head>
 
 <body>
-    <header class="xd-navbar">
+    <header class="xd-navbar animated fadeInDown">
         <div class="xd-container">
             <div class="navbar-header">
                 <span class="xd-hamburger">
@@ -49,20 +46,16 @@
                 <a class="navbar-band xd-logo-bar" href="/"><span>Xend</span>works</a>
             </div>
             <div id="xd-mobile-navbar" class="xd-mobile-hide">
-                <ul class="xd-navbar-right">
+                <ul class="xd-navbar-right ">
                     <li class="dropdown active"><a class="dropdown-toggle custom-arrow">Products</a>
                         <div class="xd-dropdown-content">
-                                    <div class="xd-category-head">Travel</div>
-                                    <div class="xd-nav-card">
-                                        <div class="xd-head-text">Xend<span class="xd-support"> Manage</span></div>
-                                        <div class="xd-tagline">Manage inventory, purchase orders and invoice in one platform.</div>
-                                    </div>
-                                    <div class="xd-nav-card">
-                                        <div class="xd-head-text">Xend <span class="xd-fleet">Fleet</span></div>
-                                        <div class="xd-tagline">Manage you fleets and your company Bookings in one
-                                            software.</div>
-                                    </div>
-                                </div>
+                          <ul>
+                           <li><img src="./assets/images/products/manage.svg" class="xd-nav-logos"> Xend Manage</li>   
+                           <li><img src="./assets/images/products/fleet.svg" class="xd-nav-logos"> Xend Fleet</li>  
+                           <li><img src="./assets/images/products/expense.svg" class="xd-nav-logos"> Xend Invoice</li>  
+                           <li><img src="./assets/images/products/media.svg" class="xd-nav-logos"> Xend Commerce</li>  
+                          </ul>         
+                        </div>
                     </li>
                     <li><a href="">Features</a></li>
                     <li><a href="">Solutions</a></li>
@@ -76,19 +69,16 @@
     </header>
     <section class="xd-main-banner">
         <div class="xd-container">
-            <div class="xd-flex">
-                <div class="xd-flex-col-40">
-                    <h1>Your technology partner for creativity and innovations 
-                    </h1>
-                    <p>From web design, development and mobile apps, through to marketing, IT, security and software.</p>
-                    <div class="xd-get-started">Talk with us</div>
-                    </div>
-                    <div class="xd-flex-col-60 animated fadeInUp">
-                        <img class="xd-home-banner-images" src="/assets/images/xd-banner-image.png">
-                    </div>
-                    </div>
-
-          
+            <div class="overlay"></div>
+        <video autoplay muted loop poster="./assets/images/poster-xend.png">
+            <source src="./assets/videos/xendworks-promo.mp4" type="video/mp4">
+          </video>
+          <div class="xd-home-fold animated fadeIn">
+            <h1>We help transform your ideas to Successful Business </h1>
+            <p>Superfast and powerful cloud software to manage your entire business digitally and transform creative ideas into business goals.</p>
+            <div class="xd-get-started">Schedule a Demo</div>
+            </div>
+        </div>
     </section>
 
 <section class="xd-products">
