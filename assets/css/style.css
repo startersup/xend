@@ -300,12 +300,12 @@ cursor: pointer;
 .xd-main-banner
 {
 padding: 140px 0px 80px;
-background-image: url("./assets/videos/xendworks-promo.mp4");
 background-repeat: no-repeat;
 background-size: cover;  
 min-height:700px;
 max-height:700px;
 height:auto;
+background-color:#03c98e38;
 /* background: linear-gradient(to bottom, #EAF9F2 0%,#EDFAF3 50%,#ffffff 100%); */
 }
 .xd-main-banner .overlay
@@ -369,6 +369,7 @@ font-family: 'GraphikWeb-Semibold';
     padding:10px 20px;
     text-align: center;
     margin: 40px auto 0;
+    border-radius: 3px;
     background-color:#03c98d;
     font-size:20px;
     cursor: pointer;
@@ -411,7 +412,6 @@ font-family: 'GraphikWeb-Semibold';
 .xd-products
 {
     padding:50px 20px;
-    min-height:100vh;
 }
 
 
@@ -435,8 +435,48 @@ font-family: 'GraphikWeb-Semibold';
 }
 
 
+/******section 2*****/
 
+/******section 3*****/
+.xd-features
+{
+    padding:50px 20px;
+}
 
+.xd-feature-card img 
+{
+    max-width:70px;
+    width:100%;
+}
+.xd-features h3 {
+    font-family: 'GraphikWeb-SemiBold';
+    color: #00000a;
+    font-size: 32px;
+    margin-bottom:80px;
+    text-align: center;
+    font-weight: 400;
+    line-height: 30px;
+}
+
+.xd-features h4 {
+    font-family: 'GraphikWeb-SemiBold';
+    color: #00000a;
+    font-size: 25px;
+    text-align: center;
+    font-weight: 400;
+    line-height: 28px;
+}
+.xd-features p {
+    font-family: 'GraphikWeb-Regular';
+    color: #242438;
+    font-size: 16px;
+    padding: 5px;
+    text-align: center;
+    margin: 0 auto;
+    font-weight: 400;
+    line-height: 29px;
+}
+/******section 3*****/
 
 /****cards ****/
 .xd-products-desc
@@ -448,17 +488,18 @@ font-family: 'GraphikWeb-Semibold';
 {
     position: relative;
     margin: 20px;
+    border-radius:10px;
     height:250px;
     padding: 40px 25px 30px;
     transition: transform 175ms ease-in,opacity 175ms ease-in,-webkit-transform 175ms ease-in;
     cursor: pointer;
-    box-shadow: 0 1px 1px 0 rgba(90,122,190,.1), 0 10px 20px 0 rgba(90,122,190,.2);
     border: 1px solid rgba(90,122,190,.08);
 }
 
 
   .xd-product-cards:hover
   {
+    box-shadow: 0 1px 1px 0 rgba(90,122,190,.1), 0 10px 20px 0 rgba(90,122,190,.2);
     transform: scale(1.05,1.05);
   }
 .xd-product-logos
@@ -470,19 +511,24 @@ font-family: 'GraphikWeb-Semibold';
 
 .xd-back-manage {
    border-bottom:5px solid #FFA102;
+   background-color:#ffbf523a;
 }
 
 .xd-back-fleet
 {
     border-bottom:5px solid #F5737F;
+    background-color:#f5737f1a;
 }
 .xd-back-expense
 {
     border-bottom:5px solid #00CEB4;
+    background-color:#00ceb417;
 }
 .xd-back-media {
     border-bottom:5px solid #0077B5;
+    background-color:#0077b51a;
  }
+
  
 
 .xd-product-cards h3
