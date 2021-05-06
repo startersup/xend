@@ -791,3 +791,24 @@ font-family: 'GraphikWeb-Semibold';
     text-align: center !important;
     font-family: 'GraphikWeb-Regular';
   }
+
+
+
+
+  /****contact-popup**/
+
+  .xend-contact-popup .modal-title
+  {
+      font-size:25px;
+      font-family: 'GraphikWeb-SemiBold';
+  }
+  .xd-contact-form
+
+{
+    padding:20px;
+}
+
+.hbspt-form .hubspot-link__container
+{
+    display: none !important;
+}
