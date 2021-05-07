@@ -304,7 +304,6 @@ cursor: pointer;
     letter-spacing: 1px !important;
     border-radius:3px;
     font-family: 'GraphikWeb-Medium';
-    text-transform: uppercase;
     border:2px solid #03c98d;
 }
 
@@ -340,7 +339,7 @@ padding: 140px 0px 80px;
 background-repeat: no-repeat;
 background-size: cover;  
 height:700px;
-background-color:#03c98e38;
+background-color:#a1ffe3d8;
 }
 .xd-main-banner video 
 {
