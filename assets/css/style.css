@@ -319,7 +319,17 @@ cursor: pointer;
     font-size:25px;
 }
 /****navbar css ends********/
-
+.overlay
+{
+    position: absolute;
+   left:0px;
+   top:0;
+    width:100%;
+    height:700px;
+    z-index: 1;
+    background: rgba(3, 3, 3, 0.493);
+    opacity: 0.5;
+}
 
 
 /****home-main-banner***/
@@ -331,17 +341,6 @@ background-repeat: no-repeat;
 background-size: cover;  
 height:700px;
 background-color:#03c98e38;
-}
-.xd-main-banner .overlay
-{
-    position: absolute;
-   left:0px;
-   top:0;
-    width:100%;
-    height:700px;
-    z-index: 1;
-    background: rgba(3, 3, 3, 0.493);
-    opacity: 0.5;
 }
 .xd-main-banner video 
 {
@@ -387,6 +386,10 @@ font-family: 'GraphikWeb-Semibold';
     max-width:800px;
     width:100%;
 }
+a 
+{
+    text-decoration: none !important;
+}
 .xd-get-started
 {
     width:300px;
@@ -397,6 +400,7 @@ font-family: 'GraphikWeb-Semibold';
     background-color:#03c98d;
     font-size:20px;
     cursor: pointer;
+    color:#ffffff;
     font-family: 'GraphikWeb-SemiBold';
 }
 .xd-get-started:after {
@@ -810,12 +814,111 @@ font-family: 'GraphikWeb-Semibold';
       font-family: 'GraphikWeb-SemiBold';
   }
   .xd-contact-form
-
 {
-    padding:20px;
+    position: absolute;
+    right: 0;
+    top: -300px;
+    z-index: 4;
+    border-radius:3px;
+    max-width: 500px !important;
+    width: 100% !important;
+    padding: 30px !important;
+    background-color: #ffffff;
+    box-shadow: 0px 25px 60px -1px #1a1a1a3d !important;
+}
+.xd-contact-form h3 
+{
+    padding:0 0 30px;
+    font-size:28px;
+    text-align:center;
+color:#00000a;
+font-family: 'GraphikWeb-SemiBold';
+
+}
+.hs-form-2a63ca9d-7520-497f-9c1d-c0f2e09234e5_7b93da5c-b4a4-4ab6-9112-379dbc99603f .hs-button
+{
+    width: 100% !important;
+    font-size: 18px !important;
+}
+.hs-button
+{
+    text-align:center !important;
 }
 
-.hbspt-form .hubspot-link__container
+.hs-form-private input 
 {
-    display: none !important;
+    width:100px !important;
+}
+
+
+
+
+/**contact-page-banner***/
+
+
+.xd-contact-banner
+{
+    padding: 120px 0px 80px;
+    background-repeat: no-repeat;
+    background-size: cover;  
+    height:500px;
+    background-color:#010806fa; 
+    background-image: url("../images/contact.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    background-position: center center; 
+}
+
+.xd-contact-banner .overlay 
+{
+    height:500px;  
+    background: rgba(0, 0, 0, 0.774);
+}
+.xd-contact-fold
+{
+    z-index:3;
+    padding:60px 0px 20px;
+    position: relative;
+    margin:0 auto;
+    color:#ffffff;
+}
+.xd-contact-fold h1
+{
+font-size:45px;
+color:#ffffff;
+font-family: 'GraphikWeb-SemiBold';
+}
+
+.xd-contact-fold p
+{
+ margin-top:20px;
+font-size:20px;
+line-height: 34px;
+letter-spacing: 0.4px;
+color:#ffffff;
+font-family: 'GraphikWeb-Regular';
+}
+.xd-contact-left
+{
+    margin-top:60px;
+    min-height:500px;
+    padding-bottom:60px;
+}
+.xd-contact-left h3 
+{
+    font-size:30px;
+    margin-bottom:30px;
+    font-family: 'GraphikWeb-SemiBold';
+    color:#181b3b;
+}
+.xd-contact-left ol 
+{
+    list-style-type: circle;
+}
+.xd-contact-left ol li 
+{
+    font-size:18px;
+    padding-bottom:20px;
+    font-family: 'GraphikWeb-Regular';
 }

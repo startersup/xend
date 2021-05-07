@@ -1,4 +1,8 @@
 @media screen and (max-width: 600px) {
+    .pdmB-20
+    {
+        padding:20px !important;
+    }
 .xd-hamburger
 {
     padding: 10px;
@@ -11,6 +15,9 @@
 {
     width: 50px !important;
     height: 40px !important;
+}
+.xd-logo-bar {
+    font-size: 24px !important;
 }
 .xd-hamburger-i
 {
@@ -51,7 +58,7 @@
 
 .xd-navbar
 {
-    padding:10px;
+    padding:10px 20px;
     height:60px !important;
 }
 .xd-flex {
@@ -96,6 +103,9 @@
     max-width: 700px;
     height: 100px;
 }
+.xd-main-banner video, .xd-main-banner .overlay {
+    height: 420px !important;
+}
 
 .xd-flex-col-40
 {
@@ -106,7 +116,10 @@
     width:100% !important;
 }
 
-
+.xd-feature-card, .xd-product-card
+{
+    margin-bottom:30px !important;
+}
 
 .xd-features h3 {
     font-size: 30px !important;
@@ -125,4 +138,42 @@
     font-size: 15px !important;
     line-height: 25px !important;
 }
+.xd-contact-fold
+{
+    padding:15px !important;
+}
+.xd-contact-fold h1 {
+    font-size: 35px !important;
+}
+.xd-contact-form
+{
+    position: relative !important;
+    width:100% !important;
+    padding:10px !important;
+    top:0 !important;
+}
+.row
+{
+    margin:0 !important;
+    padding:0 !important;
+}
+
+.xd-contact-banner,.xd-contact-banner .overlay
+{
+    padding: 60px 0px 80px !important;
+    height:300px !important;
+}
+.xd-contact-fold p {
+    font-size: 16px !important;
+    line-height: 26px !important;
+}
+.xd-contact-left
+{
+    min-height:300px !important;
+}
+.xd-contact-left ol li
+{
+    font-size: 16px !important;
+}
+
 }
