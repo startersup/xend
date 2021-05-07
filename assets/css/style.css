@@ -735,12 +735,13 @@ font-family: 'GraphikWeb-Semibold';
       color:#dbd9d2;
       font-size:18px;
       letter-spacing: 0.7px;
-      font-family: 'GraphikWeb-SemiBold';
+      font-family: 'GraphikWeb-Medium';
   }
   .xd-footer p 
   {
     color:#dbd9d2;
     font-size:14px;
+    margin-bottom:0px;
     letter-spacing: 0.3px;
     max-width:250px;
     padding:10px;
@@ -758,7 +759,13 @@ font-family: 'GraphikWeb-Semibold';
       padding:5px 15px 5px 0px;
       color:#ffffff;
       cursor: pointer;
+      transition: .3s ease-in-out;
       font-family: 'GraphikWeb-Regular';
+  }
+  .xd-footer ul li:hover
+  {
+    margin-left:5px;
+    color:#22ffbd;
   }
 
   .foot-icos .fa 
