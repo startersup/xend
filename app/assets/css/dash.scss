@@ -10,6 +10,24 @@ body
 {
     padding-top:50px;
 }
+.xd-space
+{
+    padding:10px;
+}
+.xd-add-wrapper
+{
+position: relative;
+}
+.xd-remove-pos
+{
+    position: absolute;
+    right: -10px;
+    top: 7px;
+    font-size: 13px;
+    border-radius: 50px;
+    border: 1px solid transparent;
+    background-color: #6EE394;
+}
 .xd-form-inputs
 {
 margin-top:20px;
@@ -97,7 +115,7 @@ font-size:16px;
         padding:30px;
         max-width: 500px;
         width: 100%;
-        margin: 30px auto 0;
+        margin:0px auto 0;
         
     }
     .xd-address, .xd-confirm
@@ -243,4 +261,49 @@ vertical-align: middle;
     font-size:15px;
     margin-left:5px;
     }
+}
+
+
+
+/***admin***/
+
+.xd-login-PoS
+{
+padding:10px 20px;
+background-color: $base-color;
+color: $secondary-base-color;
+width:100%;
+margin-top:30px;
+border:0;
+border-radius:3px;
+font-weight:600;
+letter-spacing: 0.5px;
+font-size:16px;
+
+}
+
+.xd-orders
+{
+padding-top:80px;
+
+h3 
+{
+    font-size:25px;
+    letter-spacing: 0.5px;
+}
+
+.xd-orders-list
+{
+    list-style-type: none;
+    margin:0;
+    padding:0;
+
+    .xd-order-card
+    {
+    display: flex;
+    padding:10px;
+    background-color: #ffffff;
+    box-shadow: 0 13px 31px -5px #0000002e;
+    }
+}
 }

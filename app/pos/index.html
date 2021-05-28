@@ -62,7 +62,6 @@ Proceed
             <div class="xd-address">
             <label>Add Address</label>
             <textarea  class="form-control xd-form-textarea"></textarea>
-
             <label>Mode of Payment</label>
        <div class="xd-paytype"><input type="radio"  name="optradio" checked> Online</div>
        <div class="xd-paytype"> <input type="radio"  name="optradio"> Cash On Delivery</div>
@@ -117,22 +116,19 @@ $('.xd-mid-pos').hide();
     $('.add').on('click', add);
 $('.remove').on('click', remove);
 function add() {
-  var product = parseInt($('#total_chq').val()) + 1;
-  var new_input = "<input type='text' class='form-control xd-form-md-inputs' placeholder='eg: Maida Maavu - 1kg' id='new_" + product + "'>";
+  var new_chq_no = parseInt($('#total_chq').val()) + 1;
+  var new_input = "<div class='xd-add-wrapper'><input type='text' class='form-control xd-form-md-inputs' placeholder='eg: Maida Maavu - 1kg' id='new_" + new_chq_no + "'> <button class='remove xd-remove-pos' onclick='remove()'> x </button></div>";
 
   $('#new_chq').append(new_input);
-
-  $('#total_chq').val(new_chq_no);
-}
-
-function remove() {
-  var last_chq_no = $('#total_chq').val();
-
-  if (last_chq_no > 1) {
-    $('#new_' + last_chq_no).remove();
-    $('#total_chq').val(last_chq_no - 1);
-  }
-}
+      $('#total_chq').val(new_chq_no)
+    }
+    function remove(){
+      var last_chq_no = $('#total_chq').val();
+      if(last_chq_no>1){
+        $('#new_'+last_chq_no).remove();
+        $('#total_chq').val(last_chq_no-1);
+      }
+    }
   </script>  
   <script>
          var items = document.querySelectorAll(".products");
