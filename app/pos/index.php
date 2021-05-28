@@ -1,10 +1,23 @@
+<?php
+
+date_default_timezone_set('Asia/Kolkata');
+
+session_start();
+
+if (isset($_SESSION["USER_INFO"])) {
+}
+
+?>
+
+
+
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
     <title>Xend PoS | VSP Super Market</title>
     <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="icon" href="./assets/images/xd-logo.png" type="image/svg" sizes="16x16">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
@@ -12,66 +25,76 @@
     <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <script src='https://kit.fontawesome.com/a076d05399.js' crossorigin='anonymous'></script>
-    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">   
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-     <link rel="stylesheet" href="/assets/css/dash.min.css">
+    <link rel="stylesheet" href="/assets/css/dash.min.css">
     <link rel="canonical" href="https://xendworks.com/" />
 </head>
-<body>
-<nav class="xd-app-nav">
-<span class="xd-title">XEND POS</span>
-</nav>
-<div class="tab-content pD50">
-<div id="home" class="tab-pane fade in active">
-<section class="xd-get-details">
-<div class="container">
- <h3>Welcome to <span>VSP</span> Online Mart 😊</span></h3> 
- <div class="xd-details">
-    <input type="text" class="form-control xd-form-inputs" required placeholder="Enter your Name *">
-    <input type="text" class="form-control xd-form-inputs" required placeholder="Enter Contact Number*">
-    <input type="text" class="form-control xd-form-inputs" placeholder="Enter Email Address ">
- </div>
-</div>    
-</section>
-<a data-toggle="tab" href="#menu1"><div class="xd-bt-fixed">
-Proceed 
-</div></a>
 
-</div>
-<div id="menu1" class="tab-pane fade">
-    <a class="xd-add-products add">Add +</a>
-    <section class="xd-get-details">
-        <div class="container">
-           <h3>Add Products</h3>
-           <ul class="xd-product-lists">
-            <div class="xd-mid-pos">
-             <img src="/assets/images/empty-cart.svg"><br>
-            </div>
-           <li><input type="hidden" value="1" class="form-control xd-form-inputs" id="total_chq">
-            <div id="new_chq"></div></li> 
-           </ul>
-            </div></section>
-            <a data-toggle="tab" href="#menu2"><div class="xd-bt-fixed">
-                Proceed 
-                </div></a>
-  </div>
-  <div id="menu2" class="tab-pane fade">
-    <a class="xd-prev" data-toggle="tab" href="#menu1"><i class="fa fa-angle-left"></i> <span>back</span></a>
-    <section class="xd-get-details">
-        <div class="container">
-            <div class="xd-address">
-            <label>Add Address</label>
-            <textarea  class="form-control xd-form-textarea"></textarea>
-            <label>Mode of Payment</label>
-       <div class="xd-paytype"><input type="radio"  name="optradio" checked> Online</div>
-       <div class="xd-paytype"> <input type="radio"  name="optradio"> Cash On Delivery</div>
-            </div>
+<body>
+    <nav class="xd-app-nav">
+        <span class="xd-title">XEND POS</span>
+    </nav>
+    <div class="tab-content pD50">
+        <div id="home" class="tab-pane fade in active">
+            <section class="xd-get-details">
+                <div class="container">
+                    <h3>Welcome to <span>VSP</span> Online Mart 😊</span></h3>
+                    <div class="xd-details basic-details">
+                        <input type="text" class="form-control xd-form-inputs req-inputs" required placeholder="Enter your Name *">
+                        <input type="text" class="form-control xd-form-inputs req-inputs" required placeholder="Enter Contact Number*">
+                        <input type="text" class="form-control xd-form-inputs req-inputs" placeholder="Enter Email Address ">
+                    </div>
+                </div>
+            </section>
+            <a data-toggle="tab" href="#menu1">
+                <div class="xd-bt-fixed basic-details-proceed">
+                    Proceed
+                </div>
+            </a>
+
         </div>
-        </section>
-        <a data-toggle="tab" href="#menu3"><div class="xd-bt-fixed">
-            Proceed 
-            </div></a>
-    </div>
+        <div id="menu1" class="tab-pane fade">
+            <a class="xd-add-products add">Add +</a>
+            <section class="xd-get-details">
+                <div class="container">
+                    <h3>Add Products</h3>
+                    <ul class="xd-product-lists">
+                        <div class="xd-mid-pos">
+                            <img src="/assets/images/empty-cart.svg"><br>
+                        </div>
+                        <li><input type="hidden" value="1" class="form-control xd-form-inputs" id="total_chq">
+                            <div id="new_chq" class="product-details"></div>
+                        </li>
+                    </ul>
+                </div>
+            </section>
+            <a data-toggle="tab" href="#menu2">
+                <div class="xd-bt-fixed product-details-proceed">
+                    Proceed
+                </div>
+            </a>
+        </div>
+        <div id="menu2" class="tab-pane fade">
+            <a class="xd-prev" data-toggle="tab" href="#menu1"><i class="fa fa-angle-left"></i> <span>back</span></a>
+            <section class="xd-get-details">
+                <div class="container">
+                    <div class="xd-address">
+                        <label>Add Address</label>
+                        <textarea class="form-control xd-form-textarea req-book"></textarea>
+                        <input type="hidden" class="req-book" id="payment"></input>
+                        <label>Mode of Payment</label>
+                        <div class="xd-paytype"><input type="radio" name="optradio" class="pay-check" checked> Online</div>
+                        <div class="xd-paytype"> <input type="radio" name="optradio" class="pay-check"> Cash On Delivery</div>
+                    </div>
+                </div>
+            </section>
+            <a data-toggle="tab" href="#menu3">
+                <div class="xd-bt-fixed">
+                    Proceed
+                </div>
+            </a>
+        </div>
 
 
         <div id="menu3" class="tab-pane fade">
@@ -80,66 +103,64 @@ Proceed
                 <div class="container">
                     <h3>Confirm Order</h3>
                     <ul class="xd-product-confirm">
-                     <li class="products">Maida Maavu 1kg <a> x </a></li>   
-                     <li class="products">Kadalai Paarupu 200g <a> x </a></li>  
-                     <li class="products">Meera shampoo - 3 Nos <a> x </a></li>  
+                        <li class="products">Maida Maavu 1kg <a> x </a></li>
+                        <li class="products">Kadalai Paarupu 200g <a> x </a></li>
+                        <li class="products">Meera shampoo - 3 Nos <a> x </a></li>
                     </ul>
-                    </div>
-                </section>
-                <a data-toggle="tab" href="#menu4"><div class="xd-bt-fixed">
-                    Confirm 
-                    </div></a>
-            </div>
+                </div>
+            </section>
+            <a data-toggle="tab" href="#menu4">
+                <div class="xd-bt-fixed">
+                    Confirm
+                </div>
+            </a>
+        </div>
 
-            <div id="menu4" class="tab-pane fade">
-                <section class="xd-order-confirm">
-                    <div class="container">
-                        <div class="xd-confirm">
+        <div id="menu4" class="tab-pane fade">
+            <section class="xd-order-confirm">
+                <div class="container">
+                    <div class="xd-confirm">
                         <h3>Success !</h3>
                         <h5>Your Order has been placed Successfully 🎉 </h5>
                         <h4>Order Id: 456373</h4>
                         <p>Use this order id to track your order status, we ensure to deliver your products safely during this COVID crisis.</p>
                         <a data-toggle="tab" href="#home"> Back to Home </a>
-                        </div>
                     </div>
-                    </section>
-                    <a  href="tel:9884489994"><div class="xd-bt-fixed">
-                        Contact Us 
-                        </div></a>
                 </div>
-</div>
+            </section>
+            <a href="tel:9884489994">
+                <div class="xd-bt-fixed">
+                    Contact Us
+                </div>
+            </a>
+        </div>
+    </div>
 </body>
 <script>
-    $(".add").click(function(){
-$('.xd-mid-pos').hide();
-});
+    $(".add").click(function() {
+        $('.xd-mid-pos').hide();
+    });
     $('.add').on('click', add);
-$('.remove').on('click', remove);
-function add() {
-  var new_chq_no = parseInt($('#total_chq').val()) + 1;
-  var new_input = "<div class='xd-add-wrapper'><input type='text' class='form-control xd-form-md-inputs' placeholder='eg: Maida Maavu - 1kg' id='new_" + new_chq_no + "'> <button class='remove xd-remove-pos' onclick='remove()'> x </button></div>";
+    $('.product-remove').on('click', function() {
+        $(this).parent().remove();
+    });
 
-  $('#new_chq').append(new_input);
-      $('#total_chq').val(new_chq_no)
+    function add() {
+        var new_input = "<div class='xd-add-wrapper'><input type='text' class='form-control xd-form-md-inputs req-products' placeholder='eg: Maida Maavu - 1kg' > <button class='remove xd-remove-pos product-remove' > x </button></div>";
+        $('#new_chq').append(new_input);
     }
-    function remove(){
-      var last_chq_no = $('#total_chq').val();
-      if(last_chq_no>1){
-        $('#new_'+last_chq_no).remove();
-        $('#total_chq').val(last_chq_no-1);
-      }
+</script>
+<script>
+    var items = document.querySelectorAll(".products");
+    for (var index = 0; index < items.length; index++) {
+        items[index].addEventListener("click", function() {
+            this.classList.toggle("active");
+        });
+        items[index].querySelector("a").addEventListener("click",
+            function() {
+                this.closest(".products").remove();
+            });
     }
-  </script>  
-  <script>
-         var items = document.querySelectorAll(".products");
-   for (var index = 0; index <items.length; index++){
-    items[index].addEventListener("click", function(){
-         this.classList.toggle("active");
-      });
-      items[index].querySelector("a").addEventListener("click",
-      function(){
-         this.closest(".products").remove();
-      });
-   }
-  </script>
+</script>
+
 </html>
