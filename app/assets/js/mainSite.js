@@ -1,8 +1,8 @@
-$(".add").click(function() {
+$(".add").click(function () {
     $('.xd-mid-pos').hide();
 });
 $('.add').on('click', add);
-​$(document).on('click','.product-remove', function() {
+$(document).on('click', '.product-remove', function () {
     $(this).parent().remove();
 });
 
