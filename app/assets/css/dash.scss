@@ -94,16 +94,25 @@ font-size:16px;
     }
     .xd-details
     {
-        margin-top:30px;
         padding:30px;
+        max-width: 500px;
+        width: 100%;
+        margin: 30px auto 0;
         
+    }
+    .xd-address, .xd-confirm
+    {
+        max-width: 500px;
+        width: 100%;
+        margin: 30px auto 0;   
     }
     .xd-product-lists
     {
     list-style-type: none;
-    margin:0;
-    margin-bottom:50px;
     padding: 10px;
+    max-width: 500px;
+    width: 100%;
+    margin: 20px auto 50px;
 
     li 
     {
