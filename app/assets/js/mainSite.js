@@ -2,7 +2,7 @@ $(".add").click(function() {
     $('.xd-mid-pos').hide();
 });
 $('.add').on('click', add);
-$('.product-remove').on('click', function() {
+​$(document).on('click','.product-remove', function() {
     $(this).parent().remove();
 });
 
