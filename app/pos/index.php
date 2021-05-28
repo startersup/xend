@@ -28,6 +28,7 @@ if (isset($_SESSION["USER_INFO"])) {
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <link rel="stylesheet" href="/assets/css/dash.min.css">
+    <script src="/assets/js/mainSite.js"></script>
     <link rel="canonical" href="https://xendworks.com/" />
 </head>
 
@@ -136,31 +137,6 @@ if (isset($_SESSION["USER_INFO"])) {
         </div>
     </div>
 </body>
-<script>
-    $(".add").click(function() {
-        $('.xd-mid-pos').hide();
-    });
-    $('.add').on('click', add);
-    $('.product-remove').on('click', function() {
-        $(this).parent().remove();
-    });
 
-    function add() {
-        var new_input = "<div class='xd-add-wrapper'><input type='text' class='form-control xd-form-md-inputs req-products' placeholder='eg: Maida Maavu - 1kg' > <button class='remove xd-remove-pos product-remove' > x </button></div>";
-        $('#new_chq').append(new_input);
-    }
-</script>
-<script>
-    var items = document.querySelectorAll(".products");
-    for (var index = 0; index < items.length; index++) {
-        items[index].addEventListener("click", function() {
-            this.classList.toggle("active");
-        });
-        items[index].querySelector("a").addEventListener("click",
-            function() {
-                this.closest(".products").remove();
-            });
-    }
-</script>
 
 </html>
