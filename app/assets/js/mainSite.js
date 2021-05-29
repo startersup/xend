@@ -19,7 +19,7 @@ $(document).on('click', '.order-details-proceed', function () {
         proceed = false;
     }
     if (data["payment"] == '') {
-        message = 'Please Enter Payment';
+        message = 'Please choose Payment Type';
         proceed = false;
     }
     if (proceed) {
@@ -41,7 +41,7 @@ $(document).on('click', '.product-details-proceed', function () {
         products.push(data);
     });
     if (products.length == 0) {
-        showAlert(false, 'Please Insert some products to proceed');
+        showAlert(false, 'Please add some products to proceed');
     } else {
         var myData = {};
         myData["data"] = products;
@@ -67,7 +67,7 @@ $(document).on('click', '.product-details-save', function () {
         products.push(data);
     });
     if (products.length == 0) {
-        showAlert(false, 'Please Insert some products to proceed');
+        showAlert(false, 'Please add atleast 1 product to proceed');
     } else {
         var myData = {};
         myData["data"] = products;
@@ -85,7 +85,7 @@ $(document).on('click', '.confirm-order-proceed', function () {
         products.push(data);
     });
     if (products.length == 0) {
-        showAlert(false, 'Please Insert some products to proceed');
+        showAlert(false, 'Please add some products to proceed');
     } else {
         var myData = {};
         myData["data"] = products;
@@ -114,10 +114,6 @@ $(document).on('click', '.basic-details-proceed', function () {
     }
     if (data["mobile"] == '') {
         message = 'Please Enter Mobile';
-        proceed = false;
-    }
-    if (data["mailId"] == '') {
-        message = 'Please Enter E-Mail Id';
         proceed = false;
     }
     if (proceed) {
@@ -174,7 +170,7 @@ function confirm_order(data) {
     }
 }
 function save_cart() {
-    showAlert(true, 'Cart saved Succesfully');
+    showAlert(true, 'Cart saved Successfully');
 }
 function showAlert(type, message) {
     var msgClass = 'alert-success';
