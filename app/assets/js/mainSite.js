@@ -10,9 +10,11 @@ $(document).on('click', '.add', function () {
 
 $(document).on('click', '.product-details-proceed', function () {
 
-    var products = {};
+    var products = [];
     $('.req-products').each(function () {
-        products.push($(this).val());
+        var data={};
+        data["product"]= $(this).val();
+        products.push(data);
     });
     var myData = {};
     myData["data"] = products;
