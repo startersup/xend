@@ -50,6 +50,6 @@ if ($result) {
     $reponse["delete_query"] = $delete_query;
     $result =  mysqli_query($conn, $delete_query);    
     $response["status"] = false;
-    $response["msg"] = "Error ! Please try again";
+    $response["msg"] = "Please try again";
 }
 echo json_encode($response);

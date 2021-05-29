@@ -179,10 +179,10 @@ function save_cart() {
 function showAlert(type, message) {
     var msgClass = 'alert-success';
     if (type) {
-        message = '<strong>Success!</strong>' + message
+        message = '<strong>Success! </strong>' + message
     } else {
         msgClass = 'alert-danger';
-        message = '<strong>Fail!</strong>' + message
+        message = '<strong>Fail! </strong>' + message
     }
 
     $('.' + msgClass).html(message);
