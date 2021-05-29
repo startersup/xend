@@ -37,7 +37,7 @@ foreach ($_SESSION['USER_INFO']['product'] as $itemData) {
     $item_name = $conn->real_escape_string($item->product);
     $items_values = $items_values . " , ('" . $last_id . "', '" . $item_name . "')";
 }
-$items_values = str_replace("tempxxxx,", "", $items_values);
+$items_values = str_replace("tempxxxx ,", "", $items_values);
 $insert_query_items = $insert_query_items . $items_values . " ; ";
 $response["insert_query_items"] = $insert_query_items;
 $result =  mysqli_query($conn, $insert_query_items);
