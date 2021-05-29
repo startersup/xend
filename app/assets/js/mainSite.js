@@ -19,7 +19,7 @@ $(document).on('click', '.order-details-proceed', function () {
         proceed = false;
     }
     if (data["payment"] == '') {
-        message = 'Please choose Payment Type';
+        message = 'Please choose payment type';
         proceed = false;
     }
     if (proceed) {
@@ -175,10 +175,10 @@ function save_cart() {
 function showAlert(type, message) {
     var msgClass = 'alert-success';
     if (type) {
-        message = '<strong>Success! </strong>' + message
+        message = '<strong></strong>' + message
     } else {
         msgClass = 'alert-danger';
-        message = '<strong>Fail! </strong>' + message
+        message = '<strong></strong>' + message
     }
 
     $('.' + msgClass).html(message);
