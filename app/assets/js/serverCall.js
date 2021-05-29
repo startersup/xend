@@ -7,7 +7,6 @@ function get_url_response(callType, url, data, func) {
     async: false,
     success: function (data) {
       var objData = JSON.parse(data);
-      formHandler(objData);
       if (func != '') {
         window[func](objData);
       }

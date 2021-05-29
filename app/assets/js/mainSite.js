@@ -8,7 +8,7 @@ $(document).on('click', '.add', function () {
     add();
 });
 
-$(document).on('click', '.product-save', function () {
+$(document).on('click', '.product-details-proceed', function () {
 
     var products = {};
     $('.req-products').each(function () {
@@ -16,9 +16,21 @@ $(document).on('click', '.product-save', function () {
     });
     var myData = {};
     myData["data"] = products;
-    myData["mobile"] = $('#mobile').val();
     var url = myUrl + myApiCalls["current_api"] + "add_cart/";
     get_url_response('POST', url, myData, 'set_cart');
+});
+
+
+$(document).on('click', '.product-details-save', function () {
+
+    var products = {};
+    $('.req-products').each(function () {
+        products.push($(this).val());
+    });
+    var myData = {};
+    myData["data"] = products;
+    var url = myUrl + myApiCalls["current_api"] + "add_cart/";
+    get_url_response('POST', url, myData, 'save_cart');
 });
 
 $(document).on('click', '.product-remove', function () {
@@ -88,6 +100,10 @@ function set_cart(data) {
   // success order details
     $('#menu4').addClass('in');
     $('#menu4').addClass('active');
+  }
+  function save_cart()
+  {
+    showAlert(true, 'Cart saved Succesfully');
   }
 function showAlert(type, message) {
     var msgClass = 'alert-success';
