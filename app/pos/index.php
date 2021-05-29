@@ -5,6 +5,9 @@ date_default_timezone_set('Asia/Kolkata');
 session_start();
 
 if (isset($_SESSION["USER_INFO"])) {
+    $name=$_SESSION['USER_INFO']['data']["name"];
+    $mailId=$_SESSION['USER_INFO']['data']["mailId"];
+    $mobile=$_SESSION['USER_INFO']['data']["mobile"];
 }
 
 ?>
@@ -50,9 +53,9 @@ if (isset($_SESSION["USER_INFO"])) {
                 <div class="container">
                     <h3>Welcome to <span>VSP</span> Online Mart 😊</span></h3>
                     <div class="xd-details basic-details">
-                        <input type="text" class="form-control xd-form-inputs req-inputs" id="name" required placeholder="Enter your Name *">
-                        <input type="text" class="form-control xd-form-inputs req-inputs" id="mobile" required placeholder="Enter Contact Number*">
-                        <input type="text" class="form-control xd-form-inputs req-inputs" id="mailId" placeholder="Enter Email Address ">
+                        <input value="<?php echo($name); ?>" type="text" class="form-control xd-form-inputs req-inputs" id="name" required placeholder="Enter your Name *">
+                        <input value="<?php echo($mobile); ?>" type="text" class="form-control xd-form-inputs req-inputs" id="mobile" required placeholder="Enter Contact Number*">
+                        <input value="<?php echo($mailId); ?>" type="text" class="form-control xd-form-inputs req-inputs" id="mailId" placeholder="Enter Email Address ">
                     </div>
                 </div>
             </section>
