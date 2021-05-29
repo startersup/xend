@@ -5,9 +5,9 @@ date_default_timezone_set('Asia/Kolkata');
 session_start();
 
 if (isset($_SESSION["USER_INFO"])) {
-    $name=$_SESSION['USER_INFO']['data']["name"];
-    $mailId=$_SESSION['USER_INFO']['data']["mailId"];
-    $mobile=$_SESSION['USER_INFO']['data']["mobile"];
+    $name = $_SESSION['USER_INFO']['data']["name"];
+    $mailId = $_SESSION['USER_INFO']['data']["mailId"];
+    $mobile = $_SESSION['USER_INFO']['data']["mobile"];
 }
 
 ?>
@@ -53,9 +53,9 @@ if (isset($_SESSION["USER_INFO"])) {
                 <div class="container">
                     <h3>Welcome to <span>VSP</span> Online Mart 😊</span></h3>
                     <div class="xd-details basic-details">
-                        <input value="<?php echo($name); ?>" type="text" class="form-control xd-form-inputs req-inputs" id="name" required placeholder="Enter your Name *">
-                        <input value="<?php echo($mobile); ?>" type="text" class="form-control xd-form-inputs req-inputs" id="mobile" required placeholder="Enter Contact Number*">
-                        <input value="<?php echo($mailId); ?>" type="text" class="form-control xd-form-inputs req-inputs" id="mailId" placeholder="Enter Email Address ">
+                        <input value="<?php echo ($name); ?>" type="text" class="form-control xd-form-inputs req-inputs" id="name" required placeholder="Enter your Name *">
+                        <input value="<?php echo ($mobile); ?>" type="text" class="form-control xd-form-inputs req-inputs" id="mobile" required placeholder="Enter Contact Number*">
+                        <input value="<?php echo ($mailId); ?>" type="text" class="form-control xd-form-inputs req-inputs" id="mailId" placeholder="Enter Email Address ">
                     </div>
                 </div>
             </section>
@@ -76,12 +76,23 @@ if (isset($_SESSION["USER_INFO"])) {
                             <img src="/assets/images/empty-cart.svg"><br>
                         </div>
                         <li><input type="hidden" value="1" class="form-control xd-form-inputs" id="total_chq">
-                            <div id="new_chq" class="product-details"></div>
+                            <div id="new_chq" class="product-details">
+
+                                <?php
+                                $product = '';
+                                foreach ($_SESSION['USER_INFO']['product'] as $itemData) {
+                                    $item = (object) $itemData;
+                                    $product = $product . "<div class='xd-add-wrapper'><input type='text' class='form-control xd-form-md-inputs req-products' value = '" . $item->product . "' placeholder='eg: Maida Maavu - 1kg' > <button class='remove xd-remove-pos product-remove' > x </button></div>";
+                                }
+                                echo ($product);         ?>
+
+
+                            </div>
                         </li>
                     </ul>
                 </div>
             </section>
-            <a next-href="#menu2" class="product-details-proceed" >
+            <a next-href="#menu2" class="product-details-proceed">
                 <div class="xd-bt-fixed ">
                     Proceed
                 </div>
@@ -150,7 +161,7 @@ if (isset($_SESSION["USER_INFO"])) {
 </body>
 
 <script>
-    var version =  Math.floor(Math.random() * 100);
+    var version = Math.floor(Math.random() * 100);
     // document.write('<script src="https://urbanxperts.in/assets/js/common.js?dev=' +version + '"\><\/script>');
     document.write('<script src="/assets/js/global.js?dev=' + version + '"\><\/script>');
     document.write('<script src="/assets/js/serverCall.js?dev=' + version + '"\><\/script>');
