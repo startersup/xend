@@ -1,55 +1,56 @@
 <?php
-
-// include('../common/index.php');
-
-// $tableName = "routes";
-// $uniqueKey = "routeId";
-// $uniqueValue = $_POST[$uniqueKey];
-// $whereClause = " WHERE " . $_POST["whereClause"];
-// $colsForTableView = " `id`, `routeId`,`routeName`, `fromDate`, `toDate`, `run1Flag`, `run2Flag`,`councilFare`, `yourFare`, `driverFare`, `escortFare` ";
-// $colsAllView = " `id`, `routeId`, `routeName`, `fromDate`, `toDate`, `run1Flag`, `run2Flag`, `run1Start`, `run1End`, `run2Start`, `run2End`, `schoolId`, `studentId`, `driverId`, `escortId`, `sunday`, `monday`, `tuesday`, `wednesday`, `thusday`, `friday`, `saturday`, `sundayFlag`, `mondayFlag`, `tuesdayFlag`, `wednesdayFlag`, `thursdayFlag`, `fridayFlag`, `saturdayFlag`, `councilFare`, `yourFare`, `driverFare`, `escortFare`, `ro`, `specialInfo`, `training`, `wscc`, `notes`, `tiktok` ";
-
-
-// include('../operation/index.php');
 session_start();
 
-// if ($_SESSION['user']['cart']['count']  == '') {
-//     $_SESSION['user']['cart']['count']=0;
-// }
 
-// $count=$_SESSION['user']['cart']['count'];
-// $_SESSION['user']['cart'][$count]['category_id']=$row['category_id'];
-// $_SESSION['user']['cart'][$count]['subCategory_id']=$row['subCategory_id'];
-// $_SESSION['user']['cart'][$count]['serviceType_id']=$row['serviceType_id'];
-// $_SESSION['user']['cart'][$count]['inspection_charge']=$row[''];
-// $_SESSION['user']['cart'][$count]['basic_charge']=$row['basic_charge'];
-// $_SESSION['user']['cart'][$count]['other_charge']=$row['other_charge'];
+$rootfolder = $_SERVER['DOCUMENT_ROOT'];
+include($rootfolder . "/connection/connection.php");
 
-// if ($_SESSION['user']["login"]  == 'Y') {
-
-// }
-
-$user_id=$POST['userID'];
-$booking_id =$POST['bookingId'];
-if($booking_id == "")
-{
-    $where="where `booking_id` in (Select `id` from `bookings` where `bookedUser` = '".$user_id."')";
-}else{
-    $where="where `booking_id`  = '".$booking_id."')";
+if ($_POST['data'] != "") {
+    $_SESSION['USER_INFO']["product"] = array();
+    $_SESSION['USER_INFO']["product"] = ($_POST['data']);
 }
-$sql ="select `booking_id` , (select `val` from `category` where `id` = `category_id`) as category_id , (select `val` from `subCategory` where `id` = `subCaregory_id`) as subCaregory_id , (select `name` from `serviceTypes` where `id` = `serviceType_id`) as serviceType_id ,`inspection_charge`  FROM `bookingService` ".$where;
 
-$result =  mysqli_query($conn, $sql);
+$name = $_SESSION['USER_INFO']['data']['name'];
+$mailId = $_SESSION['USER_INFO']['data']['mailId'];
+$mobile = $_SESSION['USER_INFO']['data']['mobile'];
+$address = $_SESSION['USER_INFO']['transaction']['address'];
+$payment = $_SESSION['USER_INFO']['transaction']['payment'];
+$address = $conn->real_escape_string($address);
 
-while ($row = mysqli_fetch_array($result, MYSQLI_ASSOC)) {
-
-    $temp[] = $row;
+$insert_query_orders = " INSERT INTO `orders` ( `mobile`, `mail`, `name`, `address`, `pay_type`, `pay_status`) VALUES ( '$mobile', '$mailId', '$name', '$address', '$payment', 'pending') ";
+$response["insert_query_orders"] = $insert_query_orders;
+$result =  mysqli_query($conn, $insert_query_orders);
+if ($result) {
+    $last_id = $conn->insert_id;
+    $update_id = $last_id;
+    $last_id = "VSP" . $last_id + 1000;
+    $update_query = " UPDATE `orders` SET `id` = '" . $last_id . "' WHERE `orders`.`sno` =  " . $update_id;
+    $response["update_query"] = $update_query;
+    $result =  mysqli_query($conn, $update_query);
 }
-if ($temp == null) {
-    $temp = array();
+
+
+$insert_query_items = " INSERT INTO `order_items` ( `order_id`, `item_name`) VALUES  ";
+$items_values = 'tempxxxx';
+foreach ($_SESSION['USER_INFO']['product'] as $itemData) {
+    $item = (object) $itemData;
+    $item_name = $conn->real_escape_string($item->product);
+    $items_values = $items_values . " , ('" . $last_id . "', '" . $item_name . "')";
 }
-$response["status"]=true;
-$response["data"] = $temp;
+$items_values = str_replace("tempxxxx ,", "", $items_values);
+$insert_query_items = $insert_query_items . $items_values . " ; ";
+$response["insert_query_items"] = $insert_query_items;
+$result =  mysqli_query($conn, $insert_query_items);
+if ($result) {
+    $response["status"] = true;
+    $response["msg"] = "Order Placed Succesfully!";
+    $response["order_id"] = $last_id;
+    $_SESSION['USER_INFO']=  array();
+} else {
+    $delete_query = " DELETE FROM `orders` WHERE `sno` =  " . $update_id;
+    $response["delete_query"] = $delete_query;
+    $result =  mysqli_query($conn, $delete_query);    
+    $response["status"] = false;
+    $response["msg"] = "Please try again";
+}
 echo json_encode($response);
-
-?>

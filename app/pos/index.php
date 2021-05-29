@@ -109,15 +109,17 @@ if (isset($_SESSION["USER_INFO"])) {
                 <div class="container">
                     <div class="xd-address">
                         <label>Add Address</label>
-                        <textarea class="form-control xd-form-textarea req-book"></textarea>
-                        <input type="hidden" class="req-book" id="payment"></input>
+                        <textarea id="address" class="form-control xd-form-textarea req-book"></textarea>
+                        <input type="hidden" class="req-book" value="online" id="payment"></input>
+                        <input type="hidden" class="req-book" value="" id="tempId"></input>
+                       
                         <label>Mode of Payment</label>
-                        <div class="xd-paytype"><input type="radio" name="optradio" class="pay-check" checked> Online</div>
-                        <div class="xd-paytype"> <input type="radio" name="optradio" class="pay-check"> Cash On Delivery</div>
+                        <div class="xd-paytype"><input value="online" type="radio" name="optradio" class="pay-check" checked> Online</div>
+                        <div class="xd-paytype"> <input value="cash on delivery" type="radio" name="optradio" class="pay-check"> Cash On Delivery</div>
                     </div>
                 </div>
             </section>
-            <a next-href="#menu3">
+            <a next-href="#menu3" class="order-details-proceed">
                 <div class="xd-bt-fixed">
                     Proceed
                 </div>
@@ -130,14 +132,14 @@ if (isset($_SESSION["USER_INFO"])) {
             <section class="xd-get-details">
                 <div class="container">
                     <h3>Confirm Order</h3>
-                    <ul class="xd-product-confirm">
+                    <ul class="xd-product-confirm product-list">
                         <li class="products">Maida Maavu 1kg <a> ❌ </a></li>
                         <li class="products">Kadalai Paarupu 200g <a> ❌ </a></li>
                         <li class="products">Meera shampoo - 3 Nos <a> ❌ </a></li>
                     </ul>
                 </div>
             </section>
-            <a next-href="#menu4">
+            <a next-href="#menu4" class="confirm-order-proceed" >
                 <div class="xd-bt-fixed">
                     Confirm
                 </div>
@@ -147,10 +149,10 @@ if (isset($_SESSION["USER_INFO"])) {
         <div id="menu4" class="tab-pane fade">
             <section class="xd-order-confirm">
                 <div class="container">
-                    <div class="xd-confirm">
+                    <div class="xd-confirm final-order-success">
                         <h3>Success !</h3>
                         <h5>Your Order has been placed Successfully 🎉 </h5>
-                        <h4>Order Id: 456373</h4>
+                        <h4 id= "order_id">Order Id: 456373</h4>
                         <p>Use this order id to track your order status, we ensure to deliver your products safely during this COVID crisis.</p>
                         <a data-toggle="tab" href="#home"> Back to Home </a>
                     </div>
