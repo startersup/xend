@@ -1,5 +1,4 @@
 
-var userData = {};
 $(document).ready(function () {
     console.log("ready!");
 });
@@ -19,7 +18,7 @@ $(document).on('click', '.product-save', function () {
     myData["data"] = products;
     myData["mobile"] = $('#mobile').val();
     var url = myUrl + apiCalls["current_api"] + "add_cart/";
-    get_url_response('POST', url, myData, 'set_user');
+    get_url_response('POST', url, myData, 'set_cart');
 });
 
 $(document).on('click', '.product-remove', function () {
@@ -61,8 +60,35 @@ $(document).on('click', '.basic-details-proceed', function () {
 });
 
 function set_user(data) {
-    userData = data;
+  $('#home').removeClass('in');
+  $('#home').removeClass('active');
+
+  $('#menu1').addClass('in');
+  $('#menu1').addClass('active');
 }
+
+function set_cart(data) {
+    $('#menu1').removeClass('in');
+    $('#menu1').removeClass('active');
+  
+    $('#menu2').addClass('in');
+    $('#menu2').addClass('active');
+  }
+  function set_address(data) {
+    $('#menu2').removeClass('in');
+    $('#menu2').removeClass('active');
+  
+    $('#menu3').addClass('in');
+    $('#menu3').addClass('active');
+  }
+
+  function confirm_order(data) {
+    $('#menu3').removeClass('in');
+    $('#menu3').removeClass('active');
+  // success order details
+    $('#menu4').addClass('in');
+    $('#menu4').addClass('active');
+  }
 function showAlert(type, message) {
     var msgClass = 'alert-success';
     if (type) {

@@ -56,7 +56,7 @@ if (isset($_SESSION["USER_INFO"])) {
                     </div>
                 </div>
             </section>
-            <a data-toggle="tab" href="#menu1" class="basic-details-proceed">
+            <a next-href="#menu1" class="basic-details-proceed">
                 <div class="xd-bt-fixed ">
                     Proceed
                 </div>
@@ -78,8 +78,8 @@ if (isset($_SESSION["USER_INFO"])) {
                     </ul>
                 </div>
             </section>
-            <a data-toggle="tab" href="#menu2">
-                <div class="xd-bt-fixed product-details-proceed">
+            <a next-href="#menu2" class="product-details-proceed" >
+                <div class="xd-bt-fixed ">
                     Proceed
                 </div>
             </a>
@@ -98,7 +98,7 @@ if (isset($_SESSION["USER_INFO"])) {
                     </div>
                 </div>
             </section>
-            <a data-toggle="tab" href="#menu3">
+            <a next-href="#menu3">
                 <div class="xd-bt-fixed">
                     Proceed
                 </div>
@@ -118,7 +118,7 @@ if (isset($_SESSION["USER_INFO"])) {
                     </ul>
                 </div>
             </section>
-            <a data-toggle="tab" href="#menu4">
+            <a next-href="#menu4">
                 <div class="xd-bt-fixed">
                     Confirm
                 </div>
