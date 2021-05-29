@@ -15,7 +15,9 @@ $(document).on('click', '.loginNow', function () {
         var myData = {};
         myData["userName"] = $('#userName').val();
         myData["password"] = $('#password').val();
-        get_url_response('POST', url, myData, 'loginDone');
+        var data = {};
+        data['data'] = myData;
+        get_url_response('POST', url, data, 'loginDone');
     }
     else {
         showAlert(proceed, message);
@@ -24,7 +26,7 @@ $(document).on('click', '.loginNow', function () {
 
 function loginDone(Obj) {
     if (Obj.status) {
-        window.location.href=myUrl+"pos/admin/orders/"
+        window.location.href = myUrl + "pos/admin/orders/"
     } else {
         showAlert(Obj.status, Obj.msg);
     }
