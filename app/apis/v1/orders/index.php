@@ -18,14 +18,14 @@ $payment = $_SESSION['USER_INFO']['transaction']['payment'];
 $address = $conn->real_escape_string($address);
 
 $insert_query_orders = " INSERT INTO `orders` ( `mobile`, `mail`, `name`, `address`, `pay_type`, `pay_status`) VALUES ( '$mobile', '$mailId', '$name', '$address', '$payment', 'pending') ";
-$reponse["insert_query_orders"] = $insert_query_orders;
+$response["insert_query_orders"] = $insert_query_orders;
 $result =  mysqli_query($conn, $insert_query_orders);
 if ($result) {
     $last_id = $conn->insert_id;
     $update_id = $last_id;
     $last_id = "VSP" + $last_id + 1000;
     $update_query = " UPDATE `orders` SET `id` = '" . $last_id . "' WHERE `orders`.`sno` =  " . $update_id;
-    $reponse["update_query"] = $update_query;
+    $response["update_query"] = $update_query;
     $result =  mysqli_query($conn, $update_query);
 }
 
@@ -39,7 +39,7 @@ foreach ($_SESSION['USER_INFO']['product'] as $itemData) {
 }
 $items_values = str_replace("tempxxxx,", "", $items_values);
 $insert_query_items = $insert_query_items . $items_values . " ; ";
-$reponse["insert_query_items"] = $insert_query_items;
+$response["insert_query_items"] = $insert_query_items;
 $result =  mysqli_query($conn, $insert_query_items);
 if ($result) {
     $response["status"] = true;
@@ -47,7 +47,7 @@ if ($result) {
     $response["order_id"] = $last_id;
 } else {
     $delete_query = " DELETE FROM `orders` WHERE `sno` =  " . $update_id;
-    $reponse["delete_query"] = $delete_query;
+    $response["delete_query"] = $delete_query;
     $result =  mysqli_query($conn, $delete_query);    
     $response["status"] = false;
     $response["msg"] = "Please try again";
