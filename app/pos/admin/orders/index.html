@@ -26,7 +26,7 @@
 <div class="container">
 <div class="xd-orders">
 <div class="xd-flex xd-sticky">
-<h3>Orders</h3>  
+<h3>Orders <span class="label label-success" id="orderCount"></span></h3>  
 <input class="form-control xd-searchbar" id="searchfilter" placeholder="Search for Orders">
 </div>
 <ul class="xd-orders-list" id="results">
@@ -213,5 +213,8 @@ $('#results .xd-order-card').each(function() {
   var acronym = matches.join('');
   $name.prev('.shortname').prepend('<div class="my-circle">' + acronym + '</div>');
 });
+
+var $orderCount = $('#results').find(".xd-order-card:visible").length;
+$('#orderCount').html($orderCount);
 </script>
 </html>
