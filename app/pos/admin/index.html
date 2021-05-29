@@ -27,13 +27,21 @@
 <div class="container">
  <h3>Welcome to <span>VSP</span> Admin</span></h3> 
  <div class="xd-details">
-    <input type="text" class="form-control xd-form-inputs" placeholder="Enter Email Address ">
-    <input type="password" class="form-control xd-form-inputs" placeholder="Enter Password ">
-    <button class="xd-login-PoS">Login</button>
+    <input type="text" id="userName" class="form-control xd-form-inputs" placeholder="Enter Email Address ">
+    <input type="password" id="password" class="form-control xd-form-inputs" placeholder="Enter Password ">
+    <button class="xd-login-PoS loginNow ">Login</button>
  </div>
 </div>    
 </section>
 
+<script>
+  var version = Math.floor(Math.random() * 100);
+  // document.write('<script src="https://urbanxperts.in/assets/js/common.js?dev=' +version + '"\><\/script>');
+  document.write('<script src="/assets/js/global.js?dev=' + version + '"\><\/script>');
+  document.write('<script src="/assets/js/serverCall.js?dev=' + version + '"\><\/script>');
+  document.write('<script src="/assets/js/mainSite.js?dev=' + version + '"\><\/script>');
+    document.write('<script src="/assets/js/login.js?dev=' + version + '"\><\/script>');
+</script>
 
 </div>
 </div>
