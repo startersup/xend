@@ -72,6 +72,7 @@ function showAlert(type, message) {
         message = '<strong>Fail!</strong>' + message
     }
 
+    $('.' + msgClass).html(message);
     $('.' + msgClass).show();
 
     setTimeout(function () { $('.' + msgClass).hide(); }, 3000);
