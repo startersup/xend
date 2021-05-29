@@ -17,7 +17,7 @@ $(document).on('click', '.product-save', function () {
     });
     var myData = {};
     myData["data"] = products;
-    myData["mobile"] =  $('#mobile').val();
+    myData["mobile"] = $('#mobile').val();
     var url = myUrl + apiCalls["current_api"] + "add_cart/";
     get_url_response('POST', url, myData, 'set_user');
 });
@@ -62,6 +62,19 @@ $(document).on('click', '.basic-details-proceed', function () {
 
 function set_user(data) {
     userData = data;
+}
+function showAlert(type, message) {
+    var msgClass = 'alert-success';
+    if (type) {
+        message = '<strong>Success!</strong>' + message
+    } else {
+        msgClass = 'alert-danger';
+        message = '<strong>Fail!</strong>' + message
+    }
+
+    $('.' + msgClass).show();
+
+    setTimeout(function () { $('.' + msgClass).hide(); }, 3000);
 }
 /*
 var items = document.querySelectorAll(".products");
