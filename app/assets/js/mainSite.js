@@ -1,7 +1,14 @@
-$(".add").click(function () {
-    $('.xd-mid-pos').hide();
+
+
+$(document).ready(function () {
+    console.log("ready!");
 });
-$('.add').on('click', add);
+
+$(document).on('click', '.add', function () {
+    $('.xd-mid-pos').hide();
+    add();
+});
+
 $(document).on('click', '.product-remove', function () {
     $(this).parent().remove();
 });

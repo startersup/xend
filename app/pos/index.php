@@ -28,7 +28,7 @@ if (isset($_SESSION["USER_INFO"])) {
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <link rel="stylesheet" href="/assets/css/dash.min.css">
-    <script src="/assets/js/mainSite.js"></script>
+    <!-- <script src="/assets/js/mainSite.js"></script> -->
     <link rel="canonical" href="https://xendworks.com/" />
 </head>
 
@@ -138,5 +138,10 @@ if (isset($_SESSION["USER_INFO"])) {
     </div>
 </body>
 
-
+<script>
+ var version= 2; // Math.floor(Math.random() * 100);
+ // document.write('<script src="https://urbanxperts.in/assets/js/common.js?dev=' +version + '"\><\/script>');
+  document.write('<script src="/assets/js/mainSite.js?dev=' +version + '"\><\/script>');
+ 
+</script>
 </html>
