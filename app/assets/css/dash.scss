@@ -104,6 +104,7 @@ font-size:16px;
     color:#000000;
     position: fixed;
     width:100%;
+    z-index:100;
     .xd-title
     {
         padding:10px;
@@ -117,6 +118,7 @@ font-size:16px;
         color: $base-color;
         font-size:20px;
         letter-spacing: 2px;
+        cursor: pointer;
         background-color: $secondary-base-color;
     }
     .xd-user-name
@@ -143,6 +145,7 @@ font-size:16px;
         vertical-align: middle;
         color: $base-color;
         font-size:20px;
+        cursor: pointer;
         padding-left:20px;
         letter-spacing: 2px;
         background-color: $secondary-base-color; 
@@ -354,7 +357,7 @@ h3
 
     @media screen and (max-width:500px) {
         font-size:18px;
-        width: 200px;
+        width: 220px;
     }
 
 }
@@ -381,8 +384,7 @@ h3
         padding:10px; 
     }
 
-    .xd-orderId
-    {
+    .xd-orderId, .xd-orderName, .xd-orderNumber, .xd-orderItem, .xd-orderPayType    {
     h5
     {
         font-weight:600;
@@ -498,5 +500,42 @@ h3
       font-weight:700;
       letter-spacing: 0.8px;
       text-decoration: none;
+      }
+  }
+
+  .xd-user-wrapper
+  {
+
+    &:hover .xd-action-dropdown
+    {
+    visibility: visible;
+    display: block;
+    }
+      .xd-action-dropdown
+      {
+          position: absolute;
+          width:150px;
+          top:40px;
+          right:10px;
+          visibility: hidden;
+          background-color:#ffffff;
+          z-index:10;
+          border:1px solid #cccccc;
+          box-shadow: 0 13px 31px -5px #0000002e;
+
+          ul 
+          {
+              list-style-type: none;
+              padding:0;
+              margin:0;
+
+              li 
+              {
+                  padding:10px;
+                  font-size:14px;
+                  cursor: pointer;
+                  border-bottom:1px solid #dfdfdf;
+              }
+          }
       }
   }
