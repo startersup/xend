@@ -38,10 +38,10 @@ if (isset($_SESSION["USER_INFO"])) {
     </nav>
     <div class="tab-content pD50">
 
-        <div class="alert alert-success" style="display:none" >
+        <div class="alert alert-success" style="display:none">
             <strong>Success!</strong> Indicates a successful or positive action.
         </div>
-        <div class="alert alert-danger" style="display:none" >
+        <div class="alert alert-danger" style="display:none">
             <strong>Danger!</strong> Indicates a dangerous or potentially negative action.
         </div>
 
@@ -147,8 +147,10 @@ if (isset($_SESSION["USER_INFO"])) {
 </body>
 
 <script>
-    var version = 2; // Math.floor(Math.random() * 100);
+    var version =  Math.floor(Math.random() * 100);
     // document.write('<script src="https://urbanxperts.in/assets/js/common.js?dev=' +version + '"\><\/script>');
+    document.write('<script src="/assets/js/global.js?dev=' + version + '"\><\/script>');
+    document.write('<script src="/assets/js/serverCall.js?dev=' + version + '"\><\/script>');
     document.write('<script src="/assets/js/mainSite.js?dev=' + version + '"\><\/script>');
 </script>
 
