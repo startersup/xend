@@ -193,15 +193,16 @@
 
  <!-- Modal -->
  <div class="modal bg xd-orderpopup" id="myModal" role="dialog">
-    <div class="modal-dialog modal-lg animated fadeIn">
+    <div class="modal-dialog modal-md animated fadeIn">
     
       <!-- Modal content-->
+
       <div class="modal-content">
         <div class="modal-header">
-          <button type="button" class="close" data-dismiss="modal"> ✕</button>
+          <button type="button" class="close" data-dismiss="modal">✕</button>
           <h4 class="modal-title xd-poptitle">Order Id: VSP67382</h4>
         </div>
-        <div class="modal-body">
+        <div class="modal-body xd-popup-body">
          <h3>Order Items</h3>
          <ul class="xd-order-items">
             <li class="products">Maida Maavu 1kg <a> ❌ </a></li>
@@ -209,15 +210,12 @@
             <li class="products">Meera shampoo - 3 Nos <a> ❌ </a></li>
         </ul>
         </div>
-        <div class="modal-footer">
-          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        <div class="modal-footer pD20">
+          <a class="xd-proceed">Proceed Order</a>
         </div>
       </div>
-      
     </div>
-  </div>
-
-
+    </div>
 </body>
 <script>
        $("#searchfilter").keyup(function() {
@@ -246,4 +244,6 @@ $('#results .xd-order-card').each(function() {
 var $orderCount = $('#results').find(".xd-order-card:visible").length;
 $('#orderCount').html($orderCount);
 </script>
+
+
 </html>

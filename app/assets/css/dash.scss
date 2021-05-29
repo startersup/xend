@@ -11,6 +11,10 @@ body
 {
     padding-top:50px;
 }
+.pD20
+{
+    padding:20px; 
+}
 .xd-sticky
 {
  position: sticky;
@@ -444,6 +448,7 @@ h3
     {
         font-size:20px;
         margin:0;
+        letter-spacing: 0.8px;
         margin-bottom:20px;
         color: $secondary-base-color;
         font-weight:700;
@@ -479,5 +484,19 @@ h3
                 color:$secondary-base-color;
             }
           }
+      }
+      .xd-popup-body
+      {
+        padding: 30px 20px !important;
+      }
+      .xd-proceed
+      {
+      cursor: pointer;
+      padding:10px 20px;
+      background-color: $base-color;
+      color:$secondary-base-color;
+      font-weight:700;
+      letter-spacing: 0.8px;
+      text-decoration: none;
       }
   }
