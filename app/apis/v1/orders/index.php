@@ -23,7 +23,7 @@ $result =  mysqli_query($conn, $insert_query_orders);
 if ($result) {
     $last_id = $conn->insert_id;
     $update_id = $last_id;
-    $last_id = "VSP" + $last_id + 1000;
+    $last_id = "VSP" . $last_id + 1000;
     $update_query = " UPDATE `orders` SET `id` = '" . $last_id . "' WHERE `orders`.`sno` =  " . $update_id;
     $response["update_query"] = $update_query;
     $result =  mysqli_query($conn, $update_query);
