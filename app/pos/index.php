@@ -104,9 +104,9 @@ if (isset($_SESSION["USER_INFO"])) {
                 <div class="container">
                     <h3>Confirm Order</h3>
                     <ul class="xd-product-confirm">
-                        <li class="products">Maida Maavu 1kg <a> x </a></li>
-                        <li class="products">Kadalai Paarupu 200g <a> x </a></li>
-                        <li class="products">Meera shampoo - 3 Nos <a> x </a></li>
+                        <li class="products">Maida Maavu 1kg <a> ❌ </a></li>
+                        <li class="products">Kadalai Paarupu 200g <a> ❌ </a></li>
+                        <li class="products">Meera shampoo - 3 Nos <a> ❌ </a></li>
                     </ul>
                 </div>
             </section>
