@@ -15,7 +15,7 @@ $(document).on('click', '.loginNow', function () {
         var myData = {};
         myData["userName"] = $('#userName').val();
         myData["password"] = $('#password').val();
-        serverCall(myData, url, 'loginDone');
+        get_url_response('POST', url, myData, 'loginDone');
     }
     else {
         showAlert(proceed, message);
