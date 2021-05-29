@@ -17,7 +17,7 @@ $(document).on('click', '.product-save', function () {
     var myData = {};
     myData["data"] = products;
     myData["mobile"] = $('#mobile').val();
-    var url = myUrl + apiCalls["current_api"] + "add_cart/";
+    var url = myUrl + myApiCalls["current_api"] + "add_cart/";
     get_url_response('POST', url, myData, 'set_cart');
 });
 
@@ -33,7 +33,7 @@ $(document).on('click', '.basic-details-proceed', function () {
     var data = {};
     data["name"] = $('#name').val();
     data["mobile"] = $('#mobile').val();
-    data["mailId"] = $('#namailIdme').val();
+    data["mailId"] = $('#mailId').val();
     var proceed = true;
     if (data["name"] == '') {
         message = 'Please Enter Name';
@@ -50,7 +50,7 @@ $(document).on('click', '.basic-details-proceed', function () {
     if (proceed) {
         var myData = {};
         myData["data"] = data;
-        var url = myUrl + apiCalls["current_api"] + "user_info/";
+        var url = myUrl + myApiCalls["current_api"] + "user_info/";
         get_url_response('POST', url, myData, 'set_user');
     } else {
         showAlert(proceed, message);
