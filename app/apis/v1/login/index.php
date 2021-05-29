@@ -9,10 +9,10 @@ $temp = $_SERVER['DOCUMENT_ROOT'];
 // }
 // $response["rootpath"]=$temp;
 include($temp . "/connection/connection.php");
-$response["conn"] = $conn;
 $user = $_POST["data"]["userName"];
 $password = $_POST["data"]["password"];
 $query = "SELECT `sno`, `id`, `name`, `mobile`, `mail`, `password` FROM `users` WHERE (   mail = '" . $user . "' or mobile = '" . $user . "' ) and status =0 ";
+$response["query"] = $query;
 $result =  mysqli_query($conn, $query);
 $count = mysqli_num_rows($result);
 if ($count > 0) {
