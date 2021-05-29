@@ -84,7 +84,12 @@ if (isset($_SESSION["USER_INFO"])) {
                                     $item = (object) $itemData;
                                     $product = $product . "<div class='xd-add-wrapper'><input type='text' class='form-control xd-form-md-inputs req-products' value = '" . $item->product . "' placeholder='eg: Maida Maavu - 1kg' > <button class='remove xd-remove-pos product-remove' > x </button></div>";
                                 }
-                                echo ($product);         ?>
+
+                                echo ($product);
+                                if ($product == '') {
+                                    echo ("<script>   $('.add').trigger('click');  <script>");
+                                }
+                                ?>
 
 
                             </div>
