@@ -87,7 +87,7 @@ if (isset($_SESSION["USER_INFO"])) {
 
                                 echo ($product);
                                 if ($product !== '') {
-                                    echo ("<script>   $('.add').trigger('click');  </script>");
+                                    echo ("<script>   $('.xd-mid-pos').hide();  </script>");
                                 }
                                 ?>
 
