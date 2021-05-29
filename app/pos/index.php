@@ -37,19 +37,27 @@ if (isset($_SESSION["USER_INFO"])) {
         <span class="xd-title">XEND POS</span>
     </nav>
     <div class="tab-content pD50">
+
+        <div class="alert alert-success" style="display:none" >
+            <strong>Success!</strong> Indicates a successful or positive action.
+        </div>
+        <div class="alert alert-danger" style="display:none" >
+            <strong>Danger!</strong> Indicates a dangerous or potentially negative action.
+        </div>
+
         <div id="home" class="tab-pane fade in active">
             <section class="xd-get-details">
                 <div class="container">
                     <h3>Welcome to <span>VSP</span> Online Mart 😊</span></h3>
                     <div class="xd-details basic-details">
-                        <input type="text" class="form-control xd-form-inputs req-inputs" required placeholder="Enter your Name *">
-                        <input type="text" class="form-control xd-form-inputs req-inputs" required placeholder="Enter Contact Number*">
-                        <input type="text" class="form-control xd-form-inputs req-inputs" placeholder="Enter Email Address ">
+                        <input type="text" class="form-control xd-form-inputs req-inputs" id="name" required placeholder="Enter your Name *">
+                        <input type="text" class="form-control xd-form-inputs req-inputs" id="mobile" required placeholder="Enter Contact Number*">
+                        <input type="text" class="form-control xd-form-inputs req-inputs" id="mailId" placeholder="Enter Email Address ">
                     </div>
                 </div>
             </section>
-            <a data-toggle="tab" href="#menu1">
-                <div class="xd-bt-fixed basic-details-proceed">
+            <a data-toggle="tab" href="#menu1" class="basic-details-proceed">
+                <div class="xd-bt-fixed ">
                     Proceed
                 </div>
             </a>
@@ -139,9 +147,9 @@ if (isset($_SESSION["USER_INFO"])) {
 </body>
 
 <script>
- var version= 2; // Math.floor(Math.random() * 100);
- // document.write('<script src="https://urbanxperts.in/assets/js/common.js?dev=' +version + '"\><\/script>');
-  document.write('<script src="/assets/js/mainSite.js?dev=' +version + '"\><\/script>');
- 
+    var version = 2; // Math.floor(Math.random() * 100);
+    // document.write('<script src="https://urbanxperts.in/assets/js/common.js?dev=' +version + '"\><\/script>');
+    document.write('<script src="/assets/js/mainSite.js?dev=' + version + '"\><\/script>');
 </script>
+
 </html>
