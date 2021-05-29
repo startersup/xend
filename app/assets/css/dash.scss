@@ -1,5 +1,6 @@
 
 $base-color: #6EE394;
+$base-bold-color: #47c770;
 $secondary-base-color:#022335;
 
 body 
@@ -9,6 +10,30 @@ body
 .pD50
 {
     padding-top:50px;
+}
+.xd-sticky
+{
+ position: sticky;
+ top:50px;
+ padding:10px 15px;
+ background-color:#ffffff;   
+}
+.xd-flex
+{
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: nowrap;
+    align-items: baseline;
+}
+.xd-searchbar
+{
+    max-width:400px;
+    width:100%;
+    margin:0 30px;
+    padding:8px 10px;
+    border-radius:0px;
+    background-color:#f4f4f4;
+    letter-spacing: 0.3px;
 }
 .xd-space
 {
@@ -82,7 +107,6 @@ font-size:16px;
         font-weight:700;
         display: flex;
         flex-direction: row;
-        width:100%;
         text-align: center;
         justify-content: center;
         vertical-align: middle;
@@ -90,6 +114,34 @@ font-size:16px;
         font-size:20px;
         letter-spacing: 2px;
         background-color: $secondary-base-color;
+    }
+    .xd-user-name
+    {
+        position: absolute;
+        right: 30px;
+        top: 8px;
+        color: #ffffff;
+        font-size: 13px;
+        font-weight:600;
+        letter-spacing: 0.5px;
+        cursor: pointer;
+    }
+    .xd-title-left
+    {
+        padding:10px;
+        line-height:30px;
+        font-weight:700;
+        display: flex;
+        flex-direction: row;
+        width:100%;
+        text-align: center;
+        justify-content: left;
+        vertical-align: middle;
+        color: $base-color;
+        font-size:20px;
+        padding-left:20px;
+        letter-spacing: 2px;
+        background-color: $secondary-base-color; 
     }
 }
 
@@ -285,12 +337,21 @@ font-size:16px;
 
 .xd-orders
 {
-padding-top:80px;
+padding-top: 50px;
+
+
 
 h3 
 {
     font-size:25px;
     letter-spacing: 0.5px;
+    margin-bottom: 30px;
+    font-weight:800;
+
+    @media screen and (max-width:500px) {
+        font-size:18px;
+    }
+
 }
 
 .xd-orders-list
@@ -302,9 +363,73 @@ h3
     .xd-order-card
     {
     display: flex;
+    flex-wrap: wrap;
+    flex-grow: 1;
     padding:10px;
+    margin-top:10px;
+    justify-content: space-evenly;
     background-color: #ffffff;
     box-shadow: 0 13px 31px -5px #0000002e;
+
+    @media screen and (max-width:500px) {
+        justify-content: space-between;   
+        padding:10px; 
     }
+
+    .xd-orderId
+    {
+    h5
+    {
+        font-weight:600;
+        letter-spacing:0.5px;
+        font-size:16px;
+        margin:0;
+        margin-bottom:10px;
+        color:  #343740;
+        @media screen and (max-width:500px) {
+            font-size:14px;
+        }
+    }
+    p 
+    {
+        font-weight:500;
+        letter-spacing:0.2px;
+        font-size:14px; 
+        color: #75828f;
+        margin:0;
+        @media screen and (max-width:500px) {
+            font-size:13px;
+        }
+    }
+    .xd-process-order
+    {
+    padding:5px 20px;
+    margin-top:20px;
+    font-weight:500;
+    letter-spacing: 0.6px;;
+    background-color: $base-color;
+    color: $secondary-base-color ;
+    border-radius:2px;
+    cursor: pointer;
+    text-decoration: none !important;
+    }
+    }
+    }
+    
 }
 }
+
+.my-circle {
+    content: attr(data-letters);
+    display: inline-block;
+    font-size: 1em;
+    width: 2.5em;
+    height: 2.5em;
+    line-height: 2.5em;
+    text-align: center;
+    border-radius: 50%;
+    background: plum;
+    vertical-align: middle;
+    margin-right: 1em;
+    color: white;
+  }
