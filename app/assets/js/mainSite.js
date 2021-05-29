@@ -163,7 +163,7 @@ function set_address(data) {
 }
 
 function confirm_order(data) {
-    showAlert(data.status, data.msg);
+    
     if (data.status) {
         $('#menu3').removeClass('in');
         $('#menu3').removeClass('active');
@@ -171,6 +171,8 @@ function confirm_order(data) {
         $('#menu4').addClass('in');
         $('#menu4').addClass('active');
         $('#order_id').html('Order Id: ' + data.order_id);
+    }else{
+        showAlert(data.status, data.msg);
     }
 }
 function save_cart() {
@@ -188,7 +190,7 @@ function showAlert(type, message) {
     $('.' + msgClass).html(message);
     $('.' + msgClass).show();
 
-    setTimeout(function () { $('.' + msgClass).hide(); }, 3000);
+    setTimeout(function () { $('.' + msgClass).hide(); }, 4000);
 }
 /*
 var items = document.querySelectorAll(".products");
