@@ -35,7 +35,7 @@ if ($type == "update") {
     $response["status"] = true;
     $response["msg"] = " Order Updated Succesfully";
 
-    $update_query = " UPDATE `orders` SET `pay_type`= '" . $payment_type . "' ,`pay_status`= '" . $payment_status . "' ,`total`='" . $total . "',`status`= '" . $order_status . "' WHERE `id` = " . $id;
+    $update_query = " UPDATE `orders` SET `pay_type`= '" . $payment_type . "' ,`pay_status`= '" . $payment_status . "' ,`total`='" . $total . "',`status`= '" . $order_status . "' WHERE `id` = '" . $id."'";
     $result =  mysqli_query($conn, $update_query);
 
     if (!$result) {
