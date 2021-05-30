@@ -58,8 +58,8 @@ $(document).on('click', '.pay-check', function () {
 
 });
 
+$(document).on('keypress', '.req-products', function () {
 
-$('.req-products').keypress(function(event){
     var keycode = (event.keyCode ? event.keyCode : event.which);
     if(keycode == '13'){
     $('.add').trigger('click');
