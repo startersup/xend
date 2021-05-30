@@ -11,7 +11,7 @@ $(document).on('click', '.order-items-show', function () {
     var myData = {};
     myData["data"] = item;
     $('.order-title').attr('order-id', item["id"]);
-    $('.order-title').html('input_' + item["id"]);
+    $('.order-title').html('Order ID : ' + item["id"]);
     var url = myUrl + myApiCalls["current_api"] + "items/";
     get_url_response('GET', url, myData, 'show_items');
 });
@@ -76,7 +76,8 @@ $(document).on('blur', '.item-price', function () {
 });
 
 $(document).on('click', '.order-cancel', function () {
-    var inp_id = $(this).attr("inp-id");
+   
+    var inp_id = 'input_'+$('.order-title').attr('order-id');
     var data = JSON.parse($('#' + inp_id).val());
     var item = {};
     item["id"] = data.id;
@@ -89,7 +90,8 @@ $(document).on('click', '.order-cancel', function () {
 });
 
 $(document).on('click', '.order-update', function () {
-    var inp_id = $(this).attr("inp-id");
+    
+    var inp_id = 'input_'+$('.order-title').attr('order-id');
     var data = JSON.parse($('#' + inp_id).val());
     var item = {};
     item["id"] = data.id;
