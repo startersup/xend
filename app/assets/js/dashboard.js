@@ -20,7 +20,7 @@ function show_items(objData) {
     var items = objData.data;
     var list = '';
     for (var i = 0; i < items.length; i++) {
-        list = list + '<li sno="' + items[i].sno + '" item-status="' + items[i].item_status + '" class="products">' + items[i].item_name + ' <input class="xd-rate-box item-price" value="' + items[i].price + '">';
+        list = list + '<li sno="' + items[i].sno + '" item-status="' + items[i].item_status + '" class="products req-products-li ">' + items[i].item_name + ' <input class="xd-rate-box item-price" value="' + items[i].price + '">';
         if (items[i].item_status == 0) {
             list = list + '<a class="item-cross"> ❌ </a> <a style="display:none" class="item-tick">✔️</a></li>';
         } else {
@@ -85,7 +85,7 @@ $(document).on('click', '.order-cancel', function () {
     item["comments"] = $('#comments').val();
     var myData = {};
     myData["data"] = item;
-    var url = myUrl + myApiCalls["current_api"] + "orders_update/";
+    var url = myUrl + myApiCalls["current_api"] + "order_update/";
     get_url_response('POST', url, myData, 'update_order');
 });
 
@@ -116,7 +116,7 @@ $(document).on('click', '.order-update', function () {
     var myData = {};
     myData["data"] = item;
     myData["products"]=products;
-    var url = myUrl + myApiCalls["current_api"] + "orders_update/";
+    var url = myUrl + myApiCalls["current_api"] + "order_update/";
     get_url_response('POST', url, myData, 'update_order');
 });
 
