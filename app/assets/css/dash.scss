@@ -23,6 +23,14 @@ body
     width: 100%;
     margin: 0 auto 20px;
 }
+.modal
+{
+    background-color: #f4f4f4a3;
+}
+.modal-content {
+    -webkit-box-shadow: 0 5px 15px #a09e9e29 !important;
+    box-shadow: 0 5px 15px #a09e9e29 !important;
+}
 .xd-sticky
 {
  position: sticky;
@@ -475,7 +483,7 @@ h3
       .xd-grand-total
       {
           margin-top:30px;
-          border-top:1px solid #eeeeee;
+          border-top:1px solid #eeeeee !important;
           font-weight:600;
           letter-spacing: 0.5px;
           
@@ -500,14 +508,14 @@ h3
            {
             max-width:120px;
             padding:5px 10px;
-            border:1px solid #cccccc;
-            position: absolute;
+            border:1px solid #cccccc !important;
+            position: absolute !important;
             right:80px;
             font-size:14px;
 
             &:focus-visible
             {
-                outline: none;
+                outline: none !important;
                 
             }
            }
