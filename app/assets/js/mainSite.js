@@ -58,13 +58,14 @@ $(document).on('click', '.pay-check', function () {
 
 });
 
-$(document).on('keypress', '.req-products', function () {
+$(document).on('keyup', '.req-products', function (event) {
 
-    var keycode = (event.keyCode ? event.keyCode : event.which);
-    if(keycode == '13'){
+    if (event.code === 'Enter') {
     $('.add').trigger('click');
     }
 });
+
+
 
 
 $(document).on('click', '.product-details-save', function () {
