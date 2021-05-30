@@ -110,7 +110,7 @@ $(document).on('click', '.order-update', function () {
             temp["item_status"] = 1;
             temp["price"] = parseFloat('0.0');
         }
-        products.push(data);
+        products.push(temp);
     });
 
     var myData = {};
