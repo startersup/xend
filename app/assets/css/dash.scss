@@ -31,6 +31,11 @@ body
     -webkit-box-shadow: 0 5px 15px #a09e9e29 !important;
     box-shadow: 0 5px 15px #a09e9e29 !important;
 }
+.modal-header
+{
+    position: sticky !important;
+    top: 0 !important;
+}
 .xd-sticky
 {
  position: sticky;
@@ -535,6 +540,10 @@ h3
       .xd-popup-body
       {
         padding: 30px 20px !important;
+        max-height:550px; 
+        min-height:300px;
+        overflow-y: auto;
+
       }
       .xd-proceed
       {
