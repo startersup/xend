@@ -47,6 +47,15 @@ $result_order =  mysqli_query($conn, $sql_query_order);
                 <h3>Orders <span class="label label-success" id="orderCount"></span></h3>
                 <input class="form-control xd-searchbar" id="searchfilter" placeholder="Search for Orders">
             </div>
+
+            <div class="alert alert-success" style="display:none">
+            <strong>Success!</strong> Indicates a successful or positive action.
+        </div>
+        <div class="alert alert-danger" style="display:none">
+            <strong>Danger!</strong> Indicates a dangerous or potentially negative action.
+        </div>
+
+
             <ul class="xd-orders-list" id="results">
                 <?php
 
