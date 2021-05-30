@@ -74,5 +74,8 @@ echo json_encode($response);
     }
     $response["status"]=true;
     $response["data"] = $temp;
+
+    
+echo json_encode($response);
     
 }

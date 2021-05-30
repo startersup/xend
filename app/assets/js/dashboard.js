@@ -113,9 +113,16 @@ $(document).on('click', '.order-update', function () {
         products.push(temp);
     });
 
+    var orders = {};
+    orders['payment_type']= $('#payment_type').val();
+    orders['payment_status']= $('#payment_status').val();
+    orders['order_status']= $('#order_status').val();
+    orders['total']= $('#grand_total').val(total);
+
     var myData = {};
     myData["data"] = item;
     myData["products"]=products;
+    myData["orders"] = orders;
     var url = myUrl + myApiCalls["current_api"] + "order_update/";
     get_url_response('POST', url, myData, 'update_order');
 });
