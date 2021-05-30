@@ -30,7 +30,7 @@ if (isset($_SESSION["USER_INFO"])) {
     <script src='https://kit.fontawesome.com/a076d05399.js' crossorigin='anonymous'></script>
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-    <link rel="stylesheet" href="/assets/css/dash.min.css">
+    <link rel="stylesheet" href="/assets/css/dash.min.css?3">
 </head>
 
 <body>
