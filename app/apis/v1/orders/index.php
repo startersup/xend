@@ -67,7 +67,6 @@ echo json_encode($response);
     $sql_query = "SELECT `sno`, `id`, `mobile`, `mail`, `name`, `address`, `pay_type`, `pay_status`, `order_total`, `delivery_total`, `total`, `item_count`,( SELECT  dd.`optionText` FROM `dropDowns` as dd WHERE dd.`id` = 1 and dd.`optionValue` = od.`status` and `status` = 0 ) as Status, `tiktok` FROM `orders` as od WHERE od.status not in (4,5)";
     $result =  mysqli_query($conn, $sql_query);   
     while ($row = mysqli_fetch_array($result, MYSQLI_ASSOC)) {
-
         $temp[] = $row;
     }
     if ($temp == null) {

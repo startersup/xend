@@ -2,8 +2,7 @@
 
     $sql = " SELECT " . $colsForTableView . " FROM `" . $tableName . "` " . $whereClause;
     $result =  mysqli_query($conn, $sql);
-    $response["sql"]=$sql;
-
+   
     while ($row = mysqli_fetch_array($result, MYSQLI_ASSOC)) {
 
         $temp[] = $row;
