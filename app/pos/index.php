@@ -152,7 +152,7 @@ if (isset($_SESSION["USER_INFO"])) {
                         <h5>Your Order has been placed Successfully 🎉 </h5>
                         <h4 id= "order_id">Order Id: 456373</h4>
                         <p>Use this order id to track your order status, we ensure to deliver your products safely during this COVID crisis.</p>
-                        <a data-toggle="tab" href="#home"> Back to Home </a>
+                        <a href="https://app.xendworks.com/pos/"> Back to Home </a>
                     </div>
                 </div>
             </section>
