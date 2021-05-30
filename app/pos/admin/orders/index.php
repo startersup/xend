@@ -118,26 +118,17 @@ $result_order =  mysqli_query($conn, $sql_query_order);
                         </ul>
                     </div>
 
-                    <div class="xd-grand-total">
+
                         <ul class="xd-order-items">
                             <li class="products"> Payment type <select id="payment_type" class="xd-rate-box">
                                     <option value="online"> Online </option>
                                     <option value="cash on delivery"> Cash On Delivery </option>
                                 </select></li>
-                        </ul>
-                    </div>
-
-                    <div class="xd-grand-total">
-                        <ul class="xd-order-items">
-                            <li class="products"> Payment status <select id="payment_status" class="xd-rate-box">
+                                <li class="products"> Payment status <select id="payment_status" class="xd-rate-box">
                                     <option value="pending"> Pending </option>
                                     <option value="paid"> Paid </option>
                                 </select></li>
-                        </ul>
-                    </div>
-                    <div class="xd-grand-total">
-                        <ul class="xd-order-items">
-                            <li class="products"> Order status <select id="order_status" dropdown="1" class="xd-rate-box">
+                                <li class="products"> Order status <select id="order_status" dropdown="1" class="xd-rate-box">
                                     <option value=''>--SELECT--</option>
                                     <?php
                                     $sql_query_drop = " SELECT  `optionValue`, `optionText` FROM `dropDowns` WHERE `status` = 0 and `id` = 1 ";
@@ -150,7 +141,9 @@ $result_order =  mysqli_query($conn, $sql_query_order);
                                     <?php  } ?>
                                 </select></li>
                         </ul>
-                    </div>
+
+            
+               
 
                 </div>
                 <div class="modal-footer pD20">
