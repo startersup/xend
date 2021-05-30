@@ -13,8 +13,8 @@ function show_items(objData) {
     var items = objData.data;
     var list = '';
     for (var i = 0; i < items.length; i++) {
-        list = list + '<li sno="' + items[i].sno + '" item-status="' + items[i].status + '" class="products">' + items[i].item_name + ' <input class="xd-rate-box item-price" value="' + items[i].price + '">';
-       if(items[i].status == 0)
+        list = list + '<li sno="' + items[i].sno + '" item-status="' + items[i].item_status + '" class="products">' + items[i].item_name + ' <input class="xd-rate-box item-price" value="' + items[i].price + '">';
+       if(items[i].item_status == 0)
        {
         list = list + '<a class="item-cross"> ❌ </a> <a style="display:none" class="item-tick">✔️</a></li>';
        }else
