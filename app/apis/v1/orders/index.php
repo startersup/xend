@@ -58,10 +58,12 @@ if (strtoupper($requestMethod) == 'POST') {
         $response["status"] = true;
         $response["msg"] = "Order Placed Succesfully!";
         $response["order_id"] = $last_id;
-        $_SESSION['USER_INFO'] =  array();
 
         include($rootfolder . "/pos/emails/admin-new-order-email.php");
         include($rootfolder . "/pos/emails/customer-booking-email.php");
+
+        
+        $_SESSION['USER_INFO'] =  array();
     } else {
         $delete_query = " DELETE FROM `orders` WHERE `sno` =  " . $update_id;
         // $response["delete_query"] = $delete_query;
