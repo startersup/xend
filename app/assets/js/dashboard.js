@@ -137,7 +137,7 @@ function update_order(objData) {
         data.pay_status= $('#payment_status').val();
 
         $('#' + inp_id).val( JSON.stringify(data) );
-        $('#' + inp_id).parent().find("p").html(data.pay_status);
+        $('#' + inp_id).parent().find("p").html(data.pay_type);
     }
     $('#myModal').hide();
 }
