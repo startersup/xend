@@ -1,5 +1,8 @@
 <?php
 
+session_start();
+
+$user = $_SESSION["data"]["name"];
 $temp = $_SERVER['DOCUMENT_ROOT'];
 include($temp . "/connection/connection.php");
 $sql_query_order = "SELECT `sno`, `id`, `mobile`, `mail`, `name`, `address`, `pay_type`, `pay_status`, `order_total`, `delivery_total`, `total`, `item_count`,( SELECT  dd.`optionText` FROM `dropDowns` as dd WHERE dd.`id` = 1 and dd.`optionValue` = od.`status` and `status` = 0 ) as Status,od.status as statusId, `tiktok` FROM `orders` as od WHERE od.status not in (4,5)";
@@ -31,7 +34,7 @@ $result_order =  mysqli_query($conn, $sql_query_order);
         <div class="xd-user-wrapper">
             <span class="xd-user-name xd-flex">
                 <div class="shortname"></div>
-                <div class="name" class="name" title="" data-id="Saicharan">Saicharan</div>
+                <div class="name" class="name" title="" data-id="<?php echo($user);  ?>"><?php echo($user);  ?></div>
             </span>
             <div class="xd-action-dropdown">
                 <ul>
