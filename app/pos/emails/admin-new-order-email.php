@@ -14,7 +14,7 @@ $del_address =$_SESSION['USER_INFO']['transaction']['address'];
                                     <tr>
                                         <td class="text" style="border-collapse: collapse;border: 0;margin: 0;-webkit-text-size-adjust: none;color: #555559;font-family: Arial, sans-serif;font-size: 16px;line-height: 26px;">
                                             <div style="text-align: center;font-size: 20px; color:#6EE394;padding: 10px; background-color: #022335;font-weight: 800;
-                                            letter-spacing: 0.2px;padding:10px;">Booking Id:.'. $last_id .'</div>
+                                            letter-spacing: 0.2px;padding:10px;">Booking Id:'. $last_id .'</div>
                                         <div class="mktEditable" style="padding:10px;color:#022335;" id="main_text">
                         <h3 style="text-align:center;"> New Order from customer </h3>
                        <table class="booking-details" style="width: 100%;max-width: 500px;margin: 0 auto;border: 1px solid #ececec;border-collapse: collapse;">
