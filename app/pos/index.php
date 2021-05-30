@@ -31,8 +31,6 @@ if (isset($_SESSION["USER_INFO"])) {
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <link rel="stylesheet" href="/assets/css/dash.min.css">
-    <!-- <script src="/assets/js/mainSite.js"></script> -->
-    <link rel="canonical" href="https://xendworks.com/" />
 </head>
 
 <body>
