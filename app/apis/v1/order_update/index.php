@@ -41,7 +41,7 @@ if ($type == "update") {
     if (!$result) {
         $response["status"] = false;
         $response["msg"] = " Order Updation Failed";
-        $response["query"] = $update_query;
+       // $response["query"] = $update_query;
     }
     if ($result) {
         foreach ($_POST['products'] as $itemData) {
@@ -56,7 +56,7 @@ if ($type == "update") {
             if (!$result) {
                 $response["status"] = false;
                 $response["msg"] = " Order Updation Failed";
-                $response["query"] = $update_query;
+               // $response["query"] = $update_query;
             }
         }
     }
