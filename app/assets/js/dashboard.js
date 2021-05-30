@@ -19,7 +19,9 @@ $(document).on('click', '.order-items-show', function () {
 function show_items(objData) {
     var items = objData.data;
     var list = '';
+    var total = 0.00;
     for (var i = 0; i < items.length; i++) {
+        total = total + items[i].price;
         list = list + '<li sno="' + items[i].sno + '" item-status="' + items[i].item_status + '" class="products req-products-li ">' + items[i].item_name + ' <input class="xd-rate-box item-price" value="' + items[i].price + '">';
         if (items[i].item_status == 0) {
             list = list + '<a class="item-cross"> ❌ </a> <a style="display:none" class="item-tick">✔️</a></li>';
@@ -35,6 +37,7 @@ function show_items(objData) {
     $('#payment_type').val(data.pay_type);
     $('#payment_status').val(data.pay_status);
     $('#order_status').val(data.statusId);
+    $('#grand_total').val(total);
     $('#myModal').show();
 }
 
