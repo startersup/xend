@@ -74,7 +74,7 @@ $result_order =  mysqli_query($conn, $sql_query_order);
                             <div class="xd-orderPayType xd-space">
                                 <h5>Pay Mode</h5>
                                 <p><?php echo ($row_order["pay_type"]); ?></p>
-                                <input type="hidden" id="<?php echo ("input_" . $row_order["id"]); ?>" value="<?php echo json_encode($row_order); ?>">
+                                <input type="hidden" id="<?php echo ("input_" . $row_order["id"]); ?>" value='<?php echo json_encode($row_order); ?>''>
                             </div>
                             <div class="xd-orderId xd-space">
                                 <h5>Action</h5>
