@@ -79,7 +79,7 @@ $result_order =  mysqli_query($conn, $sql_query_order);
                             <div class="xd-orderId xd-space">
                                 <h5>Action</h5>
                                 <a inp-id="<?php echo ("input_" . $row_order["id"]); ?>" class="xd-process-order order-items-show">Edit</a>
-                                <a style="display:none" class="xd-process-order" data-toggle="modal" data-target="#myModal">Edit</a>
+                                <a style="display:none" class="xd-process-order trigger-modal" data-toggle="modal" data-target="#myModal">Edit</a>
                             </div>
                         </div>
                     </li>

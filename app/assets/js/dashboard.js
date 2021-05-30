@@ -25,7 +25,7 @@ function show_items(objData) {
 
     }
     $('.order-item-list').html(list);
-    $('.xd-process-order').trigger("click");
+    $('.trigger-modal').trigger("click");
 }
 
 $(document).on('click', '.item-cross', function () {
