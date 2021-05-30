@@ -120,7 +120,7 @@ font-size:16px;
     color:#000000;
     position: fixed;
     width:100%;
-    z-index:100;
+    z-index:1;
 
     .xd-title
     {
@@ -221,7 +221,7 @@ font-size:16px;
     position: fixed;
     top:10px;
     right:0;
-    z-index:1000;
+    z-index: 2;
  background-color: $base-color;
  color: $secondary-base-color !important;
  padding:5px 10px;
