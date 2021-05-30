@@ -78,7 +78,7 @@ $result_order =  mysqli_query($conn, $sql_query_order);
                             </div>
                             <div class="xd-orderId xd-space">
                                 <h5>Action</h5>
-                                <a inp-id="<?php echo ("input_" . $row_order["id"]); ?>" class="order-items-show">Edit</a>
+                                <a inp-id="<?php echo ("input_" . $row_order["id"]); ?>" class="xd-process-order order-items-show">Edit</a>
                                 <a style="display:none" class="xd-process-order" data-toggle="modal" data-target="#myModal">Edit</a>
                             </div>
                         </div>
@@ -168,6 +168,7 @@ $result_order =  mysqli_query($conn, $sql_query_order);
     document.write('<script src="/assets/js/serverCall.js?dev=' + version + '"\><\/script>');
     document.write('<script src="/assets/js/mainSite.js?dev=' + version + '"\><\/script>');
     document.write('<script src="/assets/js/login.js?dev=' + version + '"\><\/script>');
+    document.write('<script src="/assets/js/dashboard.js?dev=' + version + '"\><\/script>');
     // document.write('<link rel="stylesheet" href="/assets/css/animation.css?dev=' + version + '">');
     // document.write('<link rel="stylesheet" href="/assets/css/dash.min.css?dev=' + version + '">');
 </script>
