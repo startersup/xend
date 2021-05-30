@@ -41,23 +41,25 @@ if ($type == "update") {
     if (!$result) {
         $response["status"] = false;
         $response["msg"] = " Order Updation Failed";
+        $response["query"] = $update_query;
     }
+    if ($result) {
+        foreach ($_POST['products'] as $itemData) {
+            $item = (object) $itemData;
+            $item_sno = $item->sno;
+            $item_status = $item->item_status;
+            $price =  $item->price;
 
-    foreach ($_POST['products'] as $itemData) {
-        $item = (object) $itemData;
-        $item_sno = $item->sno;
-        $item_status = $item->item_status;
-        $price =  $item->price;
+            $update_query = " UPDATE `order_items` SET `price`= '" . $price . "' ,`item_status`= '" . $item_status . "'  WHERE `sno` = " . $item_sno;
+            $result =  mysqli_query($conn, $update_query);
 
-        $update_query = " UPDATE `order_items` SET `price`= '" . $price . "' ,`item_status`= '" . $item_status . "'  WHERE `sno` = " . $item_sno;
-        $result =  mysqli_query($conn, $update_query);
-
-        if (!$result) {
-            $response["status"] = false;
-            $response["msg"] = " Order Updation Failed";
+            if (!$result) {
+                $response["status"] = false;
+                $response["msg"] = " Order Updation Failed";
+                $response["query"] = $update_query;
+            }
         }
     }
-
 
     echo json_encode($response);
 }
