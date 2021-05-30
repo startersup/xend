@@ -43,6 +43,7 @@ $(document).on('click', '.item-cross', function () {
     $(this).closest(".products").find(".item-tick").show();
     $(this).hide();
     $(this).closest(".products").find("input").val('NA');
+    $(this).closest(".products").attr("item-status","1");
 
 });
 
@@ -54,8 +55,11 @@ $(document).on('click', '.item-tick', function () {
     $(this).closest(".products").find(".item-cross").show();
     $(this).hide();
 
+    $(this).closest(".products").attr("item-status","0");
+
+
 });
-$(document).on('click', '.item-price', function () {
+$(document).on('blur', '.item-price', function () {
 
     var val = 0.00;
     if ($(this).val() !== 'NA') {
@@ -72,6 +76,7 @@ $(document).on('click', '.order-cancel', function () {
     var item = {};
     item["id"] = data.id;
     item["type"] = "cancel";
+    item["comments"] = $('#comments').val();
     var myData = {};
     myData["data"] = item;
     var url = myUrl + myApiCalls["current_api"] + "orders_update/";
@@ -83,9 +88,27 @@ $(document).on('click', '.order-update', function () {
     var data = JSON.parse($('#' + inp_id).val());
     var item = {};
     item["id"] = data.id;
-    item["type"] = "update";
+    item["type"] = "update";    
+    item["comments"] = $('#comments').val();
+
+    var products = [];
+    $('.req-products-li').each(function () {
+        var temp = {};
+        temp["sno"] = $(this).attr('sno');
+        if($(this).attr('item-status') == 0 )
+        {
+            temp["item_status"] = 0;
+            temp["price"] = parseFloat($(this).find("input").val());
+        }else{
+            temp["item_status"] = 1;
+            temp["price"] = parseFloat('0.0');
+        }
+        products.push(data);
+    });
+
     var myData = {};
     myData["data"] = item;
+    myData["products"]=products;
     var url = myUrl + myApiCalls["current_api"] + "orders_update/";
     get_url_response('POST', url, myData, 'update_order');
 });
