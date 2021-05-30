@@ -2,7 +2,7 @@
 
 $temp = $_SERVER['DOCUMENT_ROOT'];
 include($temp . "/connection/connection.php");
-$sql_query_order = "SELECT `sno`, `id`, `mobile`, `mail`, `name`, `address`, `pay_type`, `pay_status`, `order_total`, `delivery_total`, `total`, `item_count`,( SELECT  dd.`optionText` FROM `dropDowns` as dd WHERE dd.`id` = 1 and dd.`optionValue` = od.`status` and `status` = 0 ) as Status, `tiktok` FROM `orders` as od WHERE od.status not in (4,5)";
+$sql_query_order = "SELECT `sno`, `id`, `mobile`, `mail`, `name`, `address`, `pay_type`, `pay_status`, `order_total`, `delivery_total`, `total`, `item_count`,( SELECT  dd.`optionText` FROM `dropDowns` as dd WHERE dd.`id` = 1 and dd.`optionValue` = od.`status` and `status` = 0 ) as Status,od.status as statusId, `tiktok` FROM `orders` as od WHERE od.status not in (4,5)";
 $result_order =  mysqli_query($conn, $sql_query_order);
 ?>
 
@@ -104,7 +104,7 @@ $result_order =  mysqli_query($conn, $sql_query_order);
             <div class="modal-content">
                 <div class="modal-header">
                     <button type="button" class="close" data-dismiss="modal">✕</button>
-                    <h4 class="modal-title xd-poptitle order-title">Order Id: VSP67382</h4>
+                    <h4 class="modal-title xd-poptitle order-title" order-id="" >Order Id: VSP67382</h4>
                 </div>
                 <div class="modal-body xd-popup-body">
                     <h3>Order Items</h3>
@@ -114,13 +114,13 @@ $result_order =  mysqli_query($conn, $sql_query_order);
                     </ul>
                     <div class="xd-grand-total">
                         <ul class="xd-order-items">
-                            <li class="products">Grand Total<input id="grand_total" class="xd-rate-box" disabled value="" placeholder=""></li>
+                            <li class="products">Grand Total<input id="grand_total" class="xd-rate-box" disabled value="0" placeholder=""></li>
                         </ul>
                     </div>
 
                     <div class="xd-grand-total">
                         <ul class="xd-order-items">
-                            <li class="products"> Payment type <select class="xd-rate-box">
+                            <li class="products"> Payment type <select id="payment_type" class="xd-rate-box">
                                     <option value="online"> Online </option>
                                     <option value="cash on delivery"> Cash On Delivery </option>
                                 </select></li>
@@ -129,7 +129,7 @@ $result_order =  mysqli_query($conn, $sql_query_order);
 
                     <div class="xd-grand-total">
                         <ul class="xd-order-items">
-                            <li class="products"> Payment status <select class="xd-rate-box">
+                            <li class="products"> Payment status <select id="payment_status" class="xd-rate-box">
                                     <option value="pending"> Pending </option>
                                     <option value="paid"> Paid </option>
                                 </select></li>
@@ -137,7 +137,7 @@ $result_order =  mysqli_query($conn, $sql_query_order);
                     </div>
                     <div class="xd-grand-total">
                         <ul class="xd-order-items">
-                            <li class="products"> Order status <select dropdown="1" class="xd-rate-box">
+                            <li class="products"> Order status <select id="order_status" dropdown="1" class="xd-rate-box">
                                     <option value=''>--SELECT--</option>
                                     <?php
                                     $sql_query_drop = " SELECT  `optionValue`, `optionText` FROM `dropDowns` WHERE `status` = 0 and `id` = 1 ";
