@@ -15,6 +15,14 @@ body
 {
     padding:20px; 
 }
+.alert {
+    padding:10px 20px;
+    border: 1px solid transparent;
+    border-radius: 4px;
+    max-width: 400px;
+    width: 100%;
+    margin: 0 auto 20px;
+}
 .xd-sticky
 {
  position: sticky;
