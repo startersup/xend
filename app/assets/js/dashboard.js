@@ -21,7 +21,7 @@ function show_items(objData) {
     var list = '';
     var total = 0.00;
     for (var i = 0; i < items.length; i++) {
-        total = total + items[i].price;
+        total = total + parseFloat(items[i].price);
         list = list + '<li sno="' + items[i].sno + '" item-status="' + items[i].item_status + '" class="products req-products-li ">' + items[i].item_name + ' <input class="xd-rate-box item-price" value="' + items[i].price + '">';
         if (items[i].item_status == 0) {
             list = list + '<a class="item-cross"> ❌ </a> <a style="display:none" class="item-tick">✔️</a></li>';
