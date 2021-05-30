@@ -1,5 +1,7 @@
+<?php
 
-  <body link="#00a5b5" vlink="#00a5b5" alink="#00a5b5">
+$del_address =$_SESSION['USER_INFO']['transaction']['address'];
+  $admin_message = '<body link="#00a5b5" vlink="#00a5b5" alink="#00a5b5">
 
     <table class=" main contenttable" align="center" style="font-weight: normal;border-collapse: collapse;border: 0;margin-left: auto;margin-right: auto;padding: 0;font-family: Arial, sans-serif;color: #555559;background-color: white;font-size: 16px;line-height: 26px;max-width: 500px;width:100%;border: 1px solid #eeeff0;">
             <tr>
@@ -12,64 +14,37 @@
                                     <tr>
                                         <td class="text" style="border-collapse: collapse;border: 0;margin: 0;-webkit-text-size-adjust: none;color: #555559;font-family: Arial, sans-serif;font-size: 16px;line-height: 26px;">
                                             <div style="text-align: center;font-size: 20px; color:#6EE394;padding: 10px; background-color: #022335;font-weight: 800;
-                                            letter-spacing: 0.2px;padding:10px;">Booking Id: UXB1050</div>
+                                            letter-spacing: 0.2px;padding:10px;">Booking Id:.'. $last_id .'</div>
                                         <div class="mktEditable" style="padding:10px;color:#022335;" id="main_text">
                         <h3 style="text-align:center;"> New Order from customer </h3>
                        <table class="booking-details" style="width: 100%;max-width: 500px;margin: 0 auto;border: 1px solid #ececec;border-collapse: collapse;">
                         <tr>
                          <td style="line-height: 25px;padding: 10px;font-size: 15px;border: 1px solid #ececec;border-collapse: collapse;background-color: #f4f4f4;width: 30%;">Name</td>   
-                         <td style="line-height: 25px;padding: 10px;font-size: 15px;border: 1px solid #ececec;border-collapse: collapse;background-color: #f4f4f4;">Saicharan</td>
+                         <td style="line-height: 25px;padding: 10px;font-size: 15px;border: 1px solid #ececec;border-collapse: collapse;background-color: #f4f4f4;">'.$name.'</td>
                         </tr>  
                         <tr>
                             <td style="line-height: 25px;padding: 10px;font-size: 15px;border: 1px solid #ececec;border-collapse: collapse;background-color: #f4f4f4;width: 30%;">Contact Number</td>   
-                            <td style="line-height: 25px;padding: 10px;font-size: 15px;border: 1px solid #ececec;border-collapse: collapse;background-color: #f4f4f4;">9551936390</td>
+                            <td style="line-height: 25px;padding: 10px;font-size: 15px;border: 1px solid #ececec;border-collapse: collapse;background-color: #f4f4f4;">'.$mobile.'</td>
                            </tr> 
                            <tr>
                             <td style="line-height: 25px;padding: 10px;font-size: 15px;border: 1px solid #ececec;border-collapse: collapse;background-color: #f4f4f4;width: 30%;">Email Address</td>   
-                            <td style="line-height: 25px;padding: 10px;font-size: 15px;border: 1px solid #ececec;border-collapse: collapse;background-color: #f4f4f4;">saicharan14996@gmail.com</td>
+                            <td style="line-height: 25px;padding: 10px;font-size: 15px;border: 1px solid #ececec;border-collapse: collapse;background-color: #f4f4f4;">'.$mailId.'</td>
                            </tr> 
                            <tr>
                             <td style="line-height: 25px;padding: 10px;font-size: 15px;border: 1px solid #ececec;border-collapse: collapse;background-color: #f4f4f4;width: 30%;">Delivery Address</td>   
-                            <td style="line-height: 25px;padding: 10px;font-size: 15px;border: 1px solid #ececec;border-collapse: collapse;background-color: #f4f4f4;">No:30a, shankar flats, poniamman koil street, hastinapuram, chennai - 600064</td>
+                            <td style="line-height: 25px;padding: 10px;font-size: 15px;border: 1px solid #ececec;border-collapse: collapse;background-color: #f4f4f4;">'.$del_address.'</td>
                            </tr> 
                            <tr>
                             <td style="line-height: 25px;padding: 10px;font-size: 15px;border: 1px solid #ececec;border-collapse: collapse;background-color: #f4f4f4;width: 30%;">Payment Type</td>   
-                            <td style="line-height: 25px;padding: 10px;font-size: 15px;border: 1px solid #ececec;border-collapse: collapse;background-color: #f4f4f4;">Cash</td>
+                            <td style="line-height: 25px;padding: 10px;font-size: 15px;border: 1px solid #ececec;border-collapse: collapse;background-color: #f4f4f4;">'.$payment.'</td>
                            </tr> 
                        </table>
                        <br>
                        <h3 style="text-align: center;">Order Items</h3>
                        <table class="booking-details" style="width: 100%;max-width: 500px;margin: 0 auto;border: 1px solid #ececec;border-collapse: collapse;">
-                        <tr>
-                         <td style="line-height: 25px;padding: 10px;font-size: 15px;border: 1px solid #ececec;border-collapse: collapse;background-color: #f4f4f4;width: 30%;">Paasi parupu 1kg</td>   
-                        </tr>  
-                        <tr>
-                            <td style="line-height: 25px;padding: 10px;font-size: 15px;border: 1px solid #ececec;border-collapse: collapse;background-color: #f4f4f4;width: 30%;">Seeraga Samba Rice - 25kg</td>   
-                           </tr>  
-                           <tr>
-                            <td style="line-height: 25px;padding: 10px;font-size: 15px;border: 1px solid #ececec;border-collapse: collapse;background-color: #f4f4f4;width: 30%;">Aachi Fish Masala - 100g</td>   
-                           </tr>  
-                           <tr>
-                            <td style="line-height: 25px;padding: 10px;font-size: 15px;border: 1px solid #ececec;border-collapse: collapse;background-color: #f4f4f4;width: 30%;">Tata Salt - 1pckt</td>   
-                           </tr>  
-                           <tr>
-                            <td style="line-height: 25px;padding: 10px;font-size: 15px;border: 1px solid #ececec;border-collapse: collapse;background-color: #f4f4f4;width: 30%;">Paasi parupu 1kg</td>   
-                           </tr>  
-                           <tr>
-                            <td style="line-height: 25px;padding: 10px;font-size: 15px;border: 1px solid #ececec;border-collapse: collapse;background-color: #f4f4f4;width: 30%;">Paasi parupu 1kg</td>   
-                           </tr>  
-                           <tr>
-                            <td style="line-height: 25px;padding: 10px;font-size: 15px;border: 1px solid #ececec;border-collapse: collapse;background-color: #f4f4f4;width: 30%;">Paasi parupu 1kg</td>   
-                           </tr>  
-                           <tr>
-                            <td style="line-height: 25px;padding: 10px;font-size: 15px;border: 1px solid #ececec;border-collapse: collapse;background-color: #f4f4f4;width: 30%;">Paasi parupu 1kg</td>   
-                           </tr>  
-                           <tr>
-                            <td style="line-height: 25px;padding: 10px;font-size: 15px;border: 1px solid #ececec;border-collapse: collapse;background-color: #f4f4f4;width: 30%;">Paasi parupu 1kg</td>   
-                           </tr>  
-                           <tr>
-                            <td style="line-height: 25px;padding: 10px;font-size: 15px;border: 1px solid #ececec;border-collapse: collapse;background-color: #f4f4f4;width: 30%;">Paasi parupu 1kg</td>   
-                           </tr>  
+                       
+                      '.$admin_table.'  
+                       
                    
                        </table>
                        
@@ -95,6 +70,21 @@
                 
             
         
-      </body>
+      </body>';
+
+      $mailFromHeader = 'VSP Supermarket';
+      $mailFromMailId = 'xendworks@gmail.com';
+      $mailToHeader= 'VSP Supermarket';
+      $mailToMailId = 'xendworks@gmail.com';
+
+$headers = "";
+$headers .= "From: " . $mailFromHeader . " <" . $mailFromMailId . "> \r\n";
+$headers .= "Reply-To: " . $mailToHeader . "   <" . $mailToMailId . "> \r\n" . "X-Mailer: PHP/" . phpversion();
+$headers .= "MIME-Version: 1.0" . "\r\n";
+$headers .= "Content-type:text/html;charset=UTF-8" . "\r\b";
+
+$mailSubject = ' New order in Bin';
+mail('xendworks@gmail.com',$mailSubject,$admin_message,$headers);
+      ?>
 
   
