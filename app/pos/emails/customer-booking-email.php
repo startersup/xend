@@ -16,7 +16,7 @@ $customer_message = ' <body link="#00a5b5" vlink="#00a5b5" alink="#00a5b5">
                                     <tr>
                                         <td class="text" style="border-collapse: collapse;border: 0;margin: 0;-webkit-text-size-adjust: none;color: #555559;font-family: Arial, sans-serif;font-size: 16px;line-height: 26px;">
                                             <div style="text-align: center;font-size: 20px; color:#6EE394;padding: 10px; background-color: #022335; margin-bottom: 40px;font-weight: 800;
-                                            letter-spacing: 0.2px;padding:10px;">Booking Id: UXB1050</div>
+                                            letter-spacing: 0.2px;padding:10px;">Booking Id:'. $last_id .'</div>
                                         <div class="mktEditable" style="padding:20px;color:#022335;" id="main_text">
                                             Hi <b>' . $name . '</b>,<br>
 Thanks for ordering with us. We hope to deliver your products as soon as possible and with proper safety measures.<br><br>
