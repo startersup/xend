@@ -67,10 +67,13 @@ $(document).on('click', '.item-tick', function () {
 $(document).on('blur', '.item-price', function () {
 
     var val = 0.00;
-    if ($(this).val() !== 'NA') {
-        val = parseFloat($(this).val());
-    }
-    var total = val + parseFloat($('#grand_total').val());
+    var total = 0.00;
+    $('.item-price').each(function () {
+        if ($(this).val() !== 'NA') {
+            val = parseFloat($(this).val());
+            total = total + val;
+        }
+    });
     $('#grand_total').val(total);
 
 });
@@ -132,11 +135,11 @@ function update_order(objData) {
         var inp_id = 'input_' + $('.order-title').attr('order-id');
         var data = JSON.parse($('#' + inp_id).val());
 
-        data.statusId= $('#order_status').val();
-        data.pay_type=$('#payment_type').val();
-        data.pay_status= $('#payment_status').val();
+        data.statusId = $('#order_status').val();
+        data.pay_type = $('#payment_type').val();
+        data.pay_status = $('#payment_status').val();
 
-        $('#' + inp_id).val( JSON.stringify(data) );
+        $('#' + inp_id).val(JSON.stringify(data));
         $('#' + inp_id).parent().find("p").html(data.pay_type);
     }
     $('#myModal').hide();
