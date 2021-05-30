@@ -25,7 +25,7 @@ function show_items(objData) {
 
     }
     $('.order-item-list').html(list);
-    var inp_id = $('.order-title').attr('order-id');
+    var inp_id = 'input_'+$('.order-title').attr('order-id');
     var data = JSON.parse($('#' + inp_id).val());
     $('#payment_type').val(data.pay_type);
     $('#payment_status').val(data.pay_status);
