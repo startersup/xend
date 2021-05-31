@@ -154,11 +154,11 @@ $result_order =  mysqli_query($conn, $sql_query_order);
                             </select>
                     </li>
 
-                    <li class="products"> Comments
-                        <textarea id="comments" style="display:none" class="xd-rate-box">
+                    <li class="products" style="display:none"> Comments
+                        <textarea id="comments"  class="xd-rate-box">
 
                                 </textarea>
-                        <div class="modal-footer pD20">
+                        <div class="modal-footer pD20 ">
                             <a class="xd-cancel order-cancel">Cancel Now</a>
                             <a class="xd-proceed order-cancel-close">Close</a>
                         </div>
@@ -169,7 +169,7 @@ $result_order =  mysqli_query($conn, $sql_query_order);
 
 
         </div>
-        <div class="modal-footer pD20">
+        <div class="modal-footer pD20 action-buttons ">
             <a class="xd-cancel order-cancel-comments">Cancel Order</a>
             <a class="xd-proceed order-update">Update Order</a>
         </div>

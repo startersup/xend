@@ -1,5 +1,8 @@
 
 $(document).on('click', '.modal-close', function () {
+    $('#comments').val('');
+    $('.action-buttons').show();
+    $('#comments').parent().hide();
     $('#myModal').hide();
 });
 
@@ -84,14 +87,16 @@ $(document).on('blur', '.item-price', function () {
 $(document).on('click', '.order-cancel-comments', function () {
 
     $('#comments').val('');
-    $('#comments').show();
+    $('.action-buttons').hide();
+    $('#comments').parent().show();
 
 });
 
 $(document).on('click', '.order-cancel-close', function () {
 
     $('#comments').val('');
-    $('#comments').hide();
+    $('.action-buttons').show();
+    $('#comments').parent().hide();
 
 });
 
