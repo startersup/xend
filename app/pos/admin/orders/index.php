@@ -115,8 +115,8 @@ $result_order =  mysqli_query($conn, $sql_query_order);
 
             <div class="modal-content">
 
-            <div id="printable">
                 <div class="modal-header">
+                <div id="printable">
                     <button type="button" class="close modal-close" data-dismiss="modal">✕</button>
                     <h4 class="modal-title xd-poptitle order-title" order-id="" >Order Id: VSP67382</h4>
                 </div>
