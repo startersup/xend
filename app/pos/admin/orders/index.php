@@ -34,7 +34,7 @@ $result_order =  mysqli_query($conn, $sql_query_order);
         <div class="xd-user-wrapper">
             <span class="xd-user-name xd-flex">
                 <div class="shortname"></div>
-                <div class="name" class="name" title="" data-id="<?php echo($user);  ?>"><?php echo($user);  ?></div>
+                <div class="name" class="name" title="" data-id="<?php echo ($user);  ?>"><?php echo ($user);  ?></div>
             </span>
             <div class="xd-action-dropdown">
                 <ul>
@@ -52,11 +52,11 @@ $result_order =  mysqli_query($conn, $sql_query_order);
             </div>
 
             <div class="alert alert-success" style="display:none">
-            <strong>Success!</strong> Indicates a successful or positive action.
-        </div>
-        <div class="alert alert-danger" style="display:none">
-            <strong>Danger!</strong> Indicates a dangerous or potentially negative action.
-        </div>
+                <strong>Success!</strong> Indicates a successful or positive action.
+            </div>
+            <div class="alert alert-danger" style="display:none">
+                <strong>Danger!</strong> Indicates a dangerous or potentially negative action.
+            </div>
 
 
             <ul class="xd-orders-list" id="results">
@@ -149,21 +149,32 @@ $result_order =  mysqli_query($conn, $sql_query_order);
                                     while ($row_drop = mysqli_fetch_array($result_drop, MYSQLI_ASSOC)) {
 
                                     ?>
-                                        <option value='<?php echo ($row_drop['optionValue'])  ?>'><?php echo ($row_drop['optionText'])  ?></option>
-                                    <?php  } ?>
-                                </select></li>
-                        </ul>
+                                        <option value=' <?php echo ($row_drop['optionValue'])  ?>'><?php echo ($row_drop['optionText'])  ?></option>
+                            <?php  } ?>
+                            </select>
+                    </li>
 
-            
-               
+                    <li class="products"> Comments
+                        <textarea id="comments" style="display:none" class="xd-rate-box">
 
-                </div>
-                <div class="modal-footer pD20">
-                    <a class="xd-cancel order-cancel">Cancel Order</a>
-                    <a class="xd-proceed order-update">Update Order</a>
-                </div>
-            </div>
+                                </textarea>
+                        <div class="modal-footer pD20">
+                            <a class="xd-cancel order-cancel">Cancel Now</a>
+                            <a class="xd-proceed order-cancel-close">Close</a>
+                        </div>
+                    </li>
+            </ul>
+
+
+
+
         </div>
+        <div class="modal-footer pD20">
+            <a class="xd-cancel order-cancel-comments">Cancel Order</a>
+            <a class="xd-proceed order-update">Update Order</a>
+        </div>
+    </div>
+    </div>
     </div>
 </body>
 <script>

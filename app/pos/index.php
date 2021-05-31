@@ -52,7 +52,7 @@ if (isset($_SESSION["USER_INFO"])) {
                     <h3>Welcome to <span>VSP</span> Online Mart 😊</span></h3>
                     <div class="xd-details basic-details">
                         <input value="<?php echo ($name); ?>" type="text" class="form-control xd-form-inputs req-inputs" id="name" required placeholder="Enter your Name *">
-                        <input value="<?php echo ($mobile); ?>" type="text" class="form-control xd-form-inputs req-inputs" id="mobile" required placeholder="Enter Contact Number*">
+                        <input value="<?php echo ($mobile); ?>" type="text" class="form-control xd-form-inputs req-inputs xend-numeric " whole="10" id="mobile" required placeholder="Enter Contact Number*">
                         <input value="<?php echo ($mailId); ?>" type="text" class="form-control xd-form-inputs req-inputs" id="mailId" placeholder="Enter Email Address ">
                     </div>
                 </div>

@@ -22,7 +22,7 @@ function show_items(objData) {
     var total = 0.00;
     for (var i = 0; i < items.length; i++) {
         total = total + parseFloat(items[i].price);
-        list = list + '<li sno="' + items[i].sno + '" item-status="' + items[i].item_status + '" class="products req-products-li ">' + items[i].item_name + ' <input class="xd-rate-box item-price" value="' + items[i].price + '">';
+        list = list + '<li sno="' + items[i].sno + '" item-status="' + items[i].item_status + '" class="products req-products-li ">' + items[i].item_name + ' <input class="xd-rate-box item-price  xend-numeric" whole="5" decimal="2" value="' + items[i].price + '">';
         if (items[i].item_status == 0) {
             list = list + '<a class="item-cross"> ❌ </a> <a style="display:none" class="item-tick">✔️</a></li>';
         } else {
@@ -72,12 +72,26 @@ $(document).on('blur', '.item-price', function () {
     var val = 0.00;
     var total = 0.00;
     $('.item-price').each(function () {
-        if ($(this).val() !== 'NA') {
+        if ($(this).val() !== 'NA' && $(this).val() !== '') {
             val = parseFloat($(this).val());
             total = total + val;
         }
     });
     $('#grand_total').val(total);
+
+});
+
+$(document).on('click', '.order-cancel-comments', function () {
+
+    $('#comments').val('');
+    $('#comments').show();
+
+});
+
+$(document).on('click', '.order-cancel-close', function () {
+
+    $('#comments').val('');
+    $('#comments').hide();
 
 });
 
