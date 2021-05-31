@@ -585,7 +585,7 @@ h3
           background-color:#ffffff;
           z-index:10;
           border:1px solid #cccccc;
-          box-shadow: 0 13px 31px -5px #0000002e;
+          box-shadow: 0 13px 31px -5px #0000002e !important;
 
           ul 
           {
@@ -598,7 +598,7 @@ h3
                   padding:10px;
                   font-size:14px;
                   cursor: pointer;
-                  border-bottom:1px solid #dfdfdf;
+                  border-bottom:1px solid #dfdfdf !important;
               }
           }
       }
