@@ -114,6 +114,8 @@ $result_order =  mysqli_query($conn, $sql_query_order);
             <!-- Modal content-->
 
             <div class="modal-content">
+
+            <div id="printable">
                 <div class="modal-header">
                     <button type="button" class="close modal-close" data-dismiss="modal">✕</button>
                     <h4 class="modal-title xd-poptitle order-title" order-id="" >Order Id: VSP67382</h4>
@@ -158,7 +160,9 @@ $result_order =  mysqli_query($conn, $sql_query_order);
                
 
                 </div>
+                 </div>
                 <div class="modal-footer pD20">
+                <button class="print xd-print"> Print </button>
                     <a class="xd-cancel order-cancel">Cancel Order</a>
                     <a class="xd-proceed order-update">Update Order</a>
                 </div>
@@ -203,6 +207,14 @@ $result_order =  mysqli_query($conn, $sql_query_order);
 
     var $orderCount = $('#results').find(".xd-order-card:visible").length;
     $('#orderCount').html($orderCount);
+</script>
+
+<script>
+    $(function() {
+$("#printable").find('.print').on('click', function() {
+$.print("#printable");
+});
+});
 </script>
 
 
