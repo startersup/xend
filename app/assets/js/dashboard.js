@@ -5,7 +5,6 @@ $(document).on('click', '.modal-close', function () {
     $('#comments').parent().hide();
     $('#myModal').hide();
 });
-
 $(document).on('click', '.order-items-show', function () {
     var inp_id = $(this).attr("inp-id");
     var data = JSON.parse($('#' + inp_id).val());
