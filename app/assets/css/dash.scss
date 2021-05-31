@@ -505,11 +505,29 @@ h3
 
           li 
           {
-            padding:10px;
-           position: relative;
-           color:#75828f;
-           font-size:16px;
-           letter-spacing: 0.8px !important;
+            padding: 10px;
+            position: relative;
+            color: #75828f;
+            align-items: center;
+            font-size: 16px;
+            display: flex;
+            vertical-align: middle;
+            letter-spacing: 0.8px !important;
+
+            @media screen and (max-width:500px) {
+                font-size: 16px;
+            }
+
+
+            .xd-selection-box
+            {
+                max-width:150px;
+                padding:5px 10px;
+                border:1px solid #cccccc !important;
+                position: absolute !important;
+                right:80px;
+                font-size:14px;  
+            }
 
            .xd-rate-box
            {
@@ -519,6 +537,10 @@ h3
             position: absolute !important;
             right:80px;
             font-size:14px;
+
+            @media screen and (max-width:500px) {
+                max-width:55px; 
+            }
 
             &:focus-visible
             {
@@ -585,7 +607,7 @@ h3
           background-color:#ffffff;
           z-index:10;
           border:1px solid #cccccc;
-          box-shadow: 0 13px 31px -5px #0000002e;
+          box-shadow: 0 13px 31px -5px #0000002e !important;
 
           ul 
           {
@@ -598,7 +620,7 @@ h3
                   padding:10px;
                   font-size:14px;
                   cursor: pointer;
-                  border-bottom:1px solid #dfdfdf;
+                  border-bottom:1px solid #dfdfdf !important;
               }
           }
       }
