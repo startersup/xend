@@ -116,7 +116,6 @@ $result_order =  mysqli_query($conn, $sql_query_order);
             <div class="modal-content">
 
                 <div class="modal-header">
-                <div id="printable">
                     <button type="button" class="close modal-close" data-dismiss="modal">✕</button>
                     <h4 class="modal-title xd-poptitle order-title" order-id="" >Order Id: VSP67382</h4>
                 </div>
@@ -155,14 +154,8 @@ $result_order =  mysqli_query($conn, $sql_query_order);
                                     <?php  } ?>
                                 </select></li>
                         </ul>
-
-            
-               
-
-                </div>
                  </div>
                 <div class="modal-footer pD20">
-                <button class="print xd-print"> Print </button>
                     <a class="xd-cancel order-cancel">Cancel Order</a>
                     <a class="xd-proceed order-update">Update Order</a>
                 </div>
