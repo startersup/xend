@@ -171,6 +171,7 @@ if (isset($_SESSION["USER_INFO"])) {
     document.write('<script src="/assets/js/global.js?dev=' + version + '"\><\/script>');
     document.write('<script src="/assets/js/serverCall.js?dev=' + version + '"\><\/script>');
     document.write('<script src="/assets/js/mainSite.js?dev=' + version + '"\><\/script>');
+    document.write('<script src="/assets/js/validation.js?dev=' + version + '"\><\/script>');
 </script>
 
 </html>
