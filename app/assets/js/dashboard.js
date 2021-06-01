@@ -163,5 +163,5 @@ function update_order(objData) {
         $('#' + inp_id).val(JSON.stringify(data));
         $('#' + inp_id).parent().find("p").html(data.pay_type);
     }
-    $('#myModal').hide();
+    $('.modal-close').trigger('click');
 }
