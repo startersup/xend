@@ -11,7 +11,7 @@ $cancel_comments = $_POST["data"]["comments"];
 $cancel_comments = $conn->real_escape_string($cancel_comments);
 
 if ($type == "cancel") {
-    $update_query = " UPDATE `orders` SET `status` = 5 , `cancel_comments` = '" . $cancel_comments . "' WHERE `orders`.`id` =  " . $id;
+    $update_query = " UPDATE `orders` SET `status` = 5 , `cancel_comments` = '" . $cancel_comments . "' WHERE `orders`.`id`  = '" . $id."'";
 
     $response["status"] = false;
     $response["msg"] = "  Cancellation Failed";

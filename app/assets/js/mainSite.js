@@ -1,6 +1,6 @@
 
 $(document).ready(function () {
-    console.log("ready!");
+
 });
 
 $(document).on('click', '.add', function () {
@@ -61,7 +61,7 @@ $(document).on('click', '.pay-check', function () {
 $(document).on('keyup', '.req-products', function (event) {
 
     if (event.code === 'Enter') {
-    $('.add').trigger('click');
+        $('.add').trigger('click');
     }
 });
 
@@ -109,7 +109,7 @@ $(document).on('click', '.product-remove', function () {
 });
 
 function add() {
-    var new_input = "<div class='xd-add-wrapper'><input type='text' class='form-control xd-form-md-inputs req-products' placeholder='eg: Maida Maavu - 1kg' > <button class='remove xd-remove-pos product-remove' > x </button></div>";
+    var new_input = "<div class='xd-add-wrapper'><input type='text' class='form-control xd-form-md-inputs req-products ' placeholder='eg: Maida Maavu - 1kg' > <button class='remove xd-remove-pos product-remove' > x </button></div>";
     $('#new_chq').append(new_input);
 }
 $(document).on('click', '.basic-details-proceed', function () {
@@ -125,6 +125,18 @@ $(document).on('click', '.basic-details-proceed', function () {
     if (data["mobile"] == '') {
         message = 'Please Enter Mobile';
         proceed = false;
+    } else {
+
+        if (!(xendmobile(data["mobile"]))) {
+            message = 'Please Enter Valid Mobile Number';
+            proceed = false;
+        }
+    }
+    if (data["mailId"] !== '') {
+        if (!(xendmail(data["mailId"]))) {
+            message = 'Please Enter Valid Email-Id';
+            proceed = false;
+        }
     }
     if (proceed) {
         var myData = {};
@@ -169,7 +181,7 @@ function set_address(data) {
 }
 
 function confirm_order(data) {
-    
+
     if (data.status) {
         $('#menu3').removeClass('in');
         $('#menu3').removeClass('active');
@@ -177,7 +189,7 @@ function confirm_order(data) {
         $('#menu4').addClass('in');
         $('#menu4').addClass('active');
         $('#order_id').html('Order Id: ' + data.order_id);
-    }else{
+    } else {
         showAlert(data.status, data.msg);
     }
 }
